@@ -1,0 +1,143 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">订单详情</view>
+    </view>
+    <concat />
+    <view class="payment" wx:if="{{orderDetail.status_text=='待支付'}}">
+      <view class="lft_pay">
+        <view class="left_tit">等待卖家付款：</view>
+        <view class="titl_name ben">
+          <view class="nam">请在</view>
+          <van-count-down time="{{ time }}" />
+          <view class="nam">内完成支付</view>
+        </view>
+        <!-- <view class="titl_name"></view> -->
+      </view>
+      <view class="srv_ig">
+        <image src="{{imagesUrl}}/img_57.png" mode="widthFix" />
+      </view>
+    </view>
+    <view class="payment" wx:if="{{orderDetail.status_text=='待发货'}}">
+      <view class="lft_pay">
+        <view class="left_tit">等待卖家发货</view>
+        <view class="titl_name"></view>
+      </view>
+      <view class="srv_ig">
+        <image src="{{imagesUrl}}/img_55.png" mode="widthFix" />
+      </view>
+    </view>
+    <view class="payment" wx:if="{{orderDetail.status_text=='待收货'}}">
+      <view class="lft_pay">
+        <view class="left_tit">卖家已发货</view>
+        <view class="titl_name"></view>
+      </view>
+      <view class="srv_ig">
+        <image src="{{imagesUrl}}/img_47.png" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+  <view class="health">
+    <view class="stroes">
+      <view class="store_name">商品信息</view>
+      <block wx:for="{{orderList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="bos_store">
+          <image src="{{item.image}}" />
+          <view class="bos_rig">
+            <view class="title title_content2">{{item.goods_name}}</view>
+            <view class="rtpoaps">
+              <view class="ertong">{{item.goods_attr}}</view>
+              <view class="nunbs">
+                <view class="bs_icon">x</view>
+                <view class="bs_price">{{item.total_num}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="total_pri">
+          <view class="prr_name">商品单价</view>
+          <view class="nunbs">
+            <view class="bs_icon">￥</view>
+            <view class="bs_price">{{item.goods_price}}</view>
+          </view>
+        </view>
+        <view class="total_pri">
+          <view class="prr_name">应付款</view>
+          <view class="pt">
+            <view class="pt_icon">¥</view>
+            <view class="pt_price">{{item.total_price}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="inform">
+      <view class="inform_name">商家通知</view>
+      <view class="inform_test">
+        <rich-text nodes="{{notice}}"></rich-text>
+      </view>
+    </view>
+    <view class="tuikuan_list" wx:if="{{refund.length!=0}}">
+      <block wx:for="{{refund}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="tui_nae">
+          <view class="tui_item">
+            <view class="t_name">{{item.status_text}}</view>
+            <view class="pt">
+              <view class="pt_icon">¥</view>
+              <view class="pt_price">{{item.price}}</view>
+            </view>
+          </view>
+          <view class="tui_date">
+            <view class="date_name">退款日期</view>
+            <view class="date_text">{{item.createtime}}</view>
+          </view>
+          <view class="tuikuan" wx:if="{{item.status == 3}}">
+            <view class="bohui">
+              <view class="bo_name">驳回原因</view>
+              <view class="text_name">{{item.remark}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="stroes">
+      <view class="store_name">商品信息</view>
+      <view class="total_pri" wx:if="{{orderDetail.order_no!=''}}">
+        <view class="prr_name">订单编号</view>
+        <view class="test">{{orderDetail.order_no}}</view>
+      </view>
+      <view class="total_pri" wx:if="{{orderDetail.pay_time_text!=''}}">
+        <view class="prr_name">付款时间</view>
+        <view class="test">{{orderDetail.pay_time_text}}</view>
+      </view>
+      <view class="total_pri" wx:if="{{orderDetail.freight_time_text!=''}}">
+        <view class="prr_name">发货时间</view>
+        <view class="test">{{orderDetail.freight_time_text}}</view>
+      </view>
+      <view class="total_pri" wx:if="{{orderDetail.order_no!=''}}">
+        <view class="prr_name">商家退款时间</view>
+        <view class="test">{{orderDetail.order_no}}</view>
+      </view>
+    </view>
+    <view class="bny_btn">
+      <view class="bit_btn">
+        <button class="bt_emp btnmargin" disabled="{{is_true}}" wx:if="{{orderDetail.status_text=='待支付'}}" data-id="{{orderDetail.id}}" catchtap="clickCancel">
+          取消订单
+        </button>
+        <button class="bt_bg btnmargin" disabled="{{is_true}}" wx:if="{{orderDetail.status_text=='待支付'}}" data-id="{{orderDetail.id}}" catchtap="clickPay">
+          立即付款
+        </button>
+        <button class="bt_emp btnmargin" disabled="{{is_true}}" wx:if="{{orderDetail.status_text!='待支付' &&  orderDetail.refund_price > 0 }}" data-id="{{orderDetail.id}}" data-pay="{{orderDetail.refund_price}}" catchtap="clickRefund">
+          申请退款
+        </button>
+        <button class="bt_bg btnmargin" disabled="{{is_true}}" wx:if="{{orderDetail.status_text=='待收货'}}" data-id="{{orderDetail.id}}" catchtap="clickReceipt">
+          确认收货
+        </button>
+        <button class="bt_bg btnmargin" disabled="{{is_true}}" wx:if="{{orderDetail.status_text=='待评价'}}" data-id="{{orderDetail.id}}" catchtap="goTabCounsel">
+          评价
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,128 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <view class="title_oage">我的</view>
+    </view>
+    <view class="head_pos">
+      <view class="head">
+        <view class="bx_head">
+          <image wx:if="{{avatar !=''}}" src="{{avatar}}" />
+          <image wx:else src="../../static/img/img_100.png" />
+          <view class="bx_name">{{nickname!=''?nickname : '登录/注册'}}</view>
+        </view>
+        <view class="img_bx">
+          <image src="{{imagesUrl}}/img_39.png" />
+        </view>
+      </view>
+      <button open-type="getUserInfo" class="butn" bindgetuserinfo="bindGetUserInfo"></button>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="list_me">
+      <view class="chengdi_bxo">
+        <view class="top_o" bindtap="goMyOrder" data-is_nav="1" data-type="0">
+          <view class="lft_ig">
+            <image src="../../static/img/img_107.png" />
+            <view class="store_name" style="color:#FFB13B">商品订单</view>
+          </view>
+          <view class="right_ar">
+            <image src="{{imagesUrl}}/img_28.png" />
+          </view>
+        </view>
+        <view class="me_items">
+          <view class="imems" bindtap="goMyOrder" data-is_nav="1" data-type="1">
+            <image src="{{imagesUrl}}/img_15.png" />
+            <view class="imes">待付款</view>
+            <view class="order_nm" style="background: #ffbe46 ;border-radius: 50%;" wx:if="{{orderNum.NoPayNum >0 }}">
+              <view class="num_b">{{orderNum.NoPayNum}}</view>
+            </view>
+          </view>
+          <view class="imems" bindtap="goMyOrder" data-is_nav="1" data-type="2">
+            <image src="{{imagesUrl}}/img_17.png" />
+            <view class="imes">待发货</view>
+            <view class="order_nm" style="background: #ffbe46 ;border-radius: 50%;" wx:if="{{orderNum.NoFreightNum >0 }}">
+              <view class="num_b">{{orderNum.NoFreightNum}}</view>
+            </view>
+          </view>
+          <view class="imems" bindtap="goMyOrder" data-is_nav="1" data-type="3">
+            <image src="{{imagesUrl}}/img_16.png" />
+            <view class="imes">待收货</view>
+            <view class="order_nm" style="background:#ffbe46; border-radius: 50%;" wx:if="{{orderNum.NoReceiptNum >0 }}">
+              <view class="num_b">{{orderNum.NoReceiptNum}}</view>
+            </view>
+          </view>
+          <view class="imems" bindtap="goMyOrder" data-is_nav="1" data-type="5">
+            <image src="{{imagesUrl}}/img_18.png" />
+            <view class="imes">已完成/售后</view>
+            <view class="order_nm" style="background: #ffbe46; border-radius: 50%;" wx:if="{{orderNum.NoReceiptNum >0 }}">
+              <view class="num_b">{{orderNum.NoReceiptNum}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="chengdi_bxo" style="margin-top:28rpx">
+        <view class="top_o" bindtap="goMyOrder" data-is_nav="0" data-type="0">
+          <view class="lft_ig">
+            <image src="../../static/img/img_106.png" />
+            <view class="store_name">我的船票</view>
+          </view>
+          <view class="right_ar">
+            <image src="{{imagesUrl}}/img_28.png" />
+          </view>
+        </view>
+        <view class="me_items">
+          <view class="imems" bindtap="goMyOrder" data-is_nav="0" data-type="10">
+            <image src="../../static/img/img_102.png" />
+            <view class="imes">待付款</view>
+            <view class="order_nm" style="background:#ff914c; border-radius: 50%;" wx:if="{{ticketNum.status10 >0 }}">
+              <view class="num_b">{{ticketNum.status10}}</view>
+            </view>
+          </view>
+          <view class="imems" bindtap="goMyOrder" data-is_nav="0" data-type="30">
+            <image src="../../static/img/img_104.png" />
+            <view class="imes">待出单</view>
+            <view class="order_nm" style="background:#ff914c; border-radius: 50%;" wx:if="{{ticketNum.status30 >0 }}"> 
+              <view class="num_b">{{ticketNum.status30}}</view>
+            </view>
+          </view>
+          <view class="imems" bindtap="goMyOrder" data-is_nav="0" data-type="40">
+            <image src="../../static/img/img_105.png" />
+            <view class="imes">已出单</view>
+            <view class="order_nm" style="background:#ff914c; border-radius: 50%;" wx:if="{{ticketNum.status40 >0 }}">
+              <view class="num_b">{{ticketNum.status40}}</view>
+            </view>
+          </view>
+          <view class="imems" bindtap="goMyOrder" data-is_nav="0" data-type="70">
+            <image src="../../static/img/img_103.png" />
+            <view class="imes">已完成/售后</view>
+            <view class="order_nm" style="background:#ff914c; border-radius: 50%;" wx:if="{{ticketNum.status70 >0 }}">
+              <view class="num_b">{{ticketNum.status70}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="changhe_lis">
+      <view class="list_change" bindtap="goAddress">
+        <view class="lfe">
+          <image src="{{imagesUrl}}/img_19.png" />
+          <view class="address">配送地址</view>
+        </view>
+        <view class="right_ar">
+          <image src="{{imagesUrl}}/img_28.png" />
+        </view>
+      </view>
+      <view class="list_change" bindtap="goMyCollected">
+        <view class="lfe">
+          <image src="{{imagesUrl}}/img_20.png" />
+          <view class="address">我的收藏</view>
+        </view>
+        <view class="right_ar">
+          <image src="{{imagesUrl}}/img_28.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

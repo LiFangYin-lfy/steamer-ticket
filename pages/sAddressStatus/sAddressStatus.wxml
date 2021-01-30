@@ -1,0 +1,70 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">我的收货地址</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <form action="" bindsubmit="submitForm">
+      <view class="lets">
+        <view class="ress_a">
+          <view class="car_title">姓名</view>
+          <view class="input_is">
+            <input type="text" class="textInpit" placeholder="请输入姓名" placeholder-class="text_car" name="name" value="{{name}}" bindinput="getInput" />
+          </view>
+        </view>
+        <view class="ress_a">
+          <view class="car_title">电话</view>
+          <view class="input_is">
+            <input type="number" maxlength="11" class="textInpit" placeholder="请输入电话" placeholder-class="text_car" name="mobile" value="{{mobile}}" bindinput="getPhone" />
+          </view>
+        </view>
+        <view class="card_time    ress_a">
+          <view class="car_title">地区</view>
+          <view class="change_4S">
+            <picker mode="region" value="{{area}}" bindchange="bindRegionChange" name="area">
+              <view class="picker">
+                <view class="picker_1  {{area != ''? 'address':'' }}">
+                  {{area == ''? '选择省/市/区':area}}
+                </view>
+                <view class="rowimg">
+                  <image src="{{imagesUrl}}/img_28.png" />
+                </view>
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="ress_a">
+          <view class="car_title">详细地址</view>
+          <view class="input_is">
+            <input type="text" class="textInpit" placeholder="请输入详细地址" placeholder-class="text_car" name="address" value="{{address}}" />
+          </view>
+        </view>
+        <view class="ress_a">
+          <view class="car_title">邮政编码</view>
+          <view class="input_is">
+            <input type="number" class="textInpit" placeholder="请输入邮政编码" placeholder-class="text_car" name="code" value="{{code}}" />
+          </view>
+        </view>
+        <view class="ress_b" bindtap="setIsMo">
+          <view class="car_titl">设为默认地址</view>
+          <view class="rig_bens">
+            <image src="../../static/img/img_108.png" mode="widthFix" wx:if="{{default==1}}" />
+            <image src="{{imagesUrl}}/img_44.png" mode="widthFix" wx:else />
+          </view>
+        </view>
+        <view class="btnbuy">
+          <button class="btnbuy__" size="default" form-type="submit" disabled="{{formTrue}}">
+            确认
+          </button>
+          <button class="delete_btn" wx:if="{{user_address_id != ''}}" disabled="{{delTrue}}" size="default" catchtap="clickDelete">
+            删除
+          </button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

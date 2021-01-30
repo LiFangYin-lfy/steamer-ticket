@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "concat": "/Components/concat/concat",
+     "van-calendar": "@vant/weapp/calendar/index"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white"
+}

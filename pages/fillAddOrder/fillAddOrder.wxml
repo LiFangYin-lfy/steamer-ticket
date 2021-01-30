@@ -1,0 +1,80 @@
+<view class="container">
+  <form action="" bindsubmit="submitOrder">
+    <view class="header">
+      <view class="s" style='height:{{statusTop}}px'></view>
+      <view class="left_img">
+        <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+        <view class="title_oage">添加乘客</view>
+      </view>
+    </view>
+    <concat />
+    <view class="health">
+      <view class="list_form">
+        <view class="t_m">
+          <view class="t_name">姓名</view>
+          <view class="inputed">
+            <input type="text" value="{{names}}" class="inptus" placeholder="请填写姓名" placeholder-class="input_placeholder" name="names" />
+          </view>
+        </view>
+        <view class="t_m">
+          <view class="t_name">船票类型</view>
+          <view class="change_4S">
+            <picker style="display :block; width: 100%;height: 88rpx;" range-key="{{'name'}}" value="{{tick_name}}" range="{{TicketType}}" bindchange="bindTickChange" name="tick_name">
+              <view class="picker_box">
+                <view class="picker_1  {{tick_name != ''? 'buy_time':'' }}">
+                  {{tick_name == ''? '船票类型':tick_name}}
+                </view>
+                <view class="rowimg">
+                  <image src="{{imagesUrl}}/img_28.png" />
+                </view>
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="t_m">
+          <view class="t_name">证件类型</view>
+          <view class="change_4S">
+            <picker style="display :block; width: 100%;height: 88rpx;" value="{{type_name}}" range-key="{{'name'}}" range="{{idType}}" bindchange="bindIdChange" name="type_name">
+              <view class="picker_box">
+                <view class="picker_1  {{type_name != ''? 'buy_time':'' }}">
+                  {{type_name == ''? '请选择证件类型':type_name}}
+                </view>
+                <view class="rowimg">
+                  <image src="{{imagesUrl}}/img_28.png" />
+                </view>
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="t_m">
+          <view class="t_name">证件号码</view>
+          <view class="w_id_card">
+            <view class="inputmd">
+              <input type="text" class="inptus" placeholder="请填写乘船人证件号码" placeholder-class="input_placeholder" value="{{IDcard}}" name="IDcard" />
+            </view>
+            <image src="{{imagesUrl}}/img_28.png" class="arrow" />
+          </view>
+        </view>
+      </view>
+      <view class="goumai">
+        <view class="mai_name">
+          <image src="{{imagesUrl}}/img_48.png" />
+          <view class="xu_name">购买须知</view>
+        </view>
+        <view class="detail_list">
+          <view class="list_del">
+            <rich-text nodes="{{buy_text}}"></rich-text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="bny_btn">
+      <view class="bit_btn">
+        <button form-type="submit" wx:if="{{add_editor!=2}}" data-button="1" bindtap="cli" class="bt_emp btnmargin">
+          完成并继续添加乘客
+        </button>
+        <button form-type="submit" data-button="2" class="bt_bg btnmargin">完成</button>
+      </view>
+    </view>
+  </form>
+</view>

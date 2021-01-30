@@ -1,0 +1,267 @@
+page {
+  background-color: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(180deg, #ffb94c, #ff893e);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img .title_oage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+}
+.container .health .searchbox {
+  height: 108rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container .health .searchbox .pic {
+  width: 68rpx;
+  height: 68rpx;
+  margin-left: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container .health .searchbox .pic image {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 auto;
+}
+.container .health .searchbox .pic .pic_count {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  z-index: 2;
+}
+.container .health .searchbox .pic .pic_count .coun {
+  min-width: 32rpx;
+  min-height: 32rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff893e;
+}
+.container .health .searchbox .searchinput {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 68rpx;
+  background: #f7f8fa;
+  border-radius: 4rpx;
+  padding-left: 32rpx;
+  box-sizing: border-box;
+}
+.container .health .searchbox .searchinput .searchicon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 12rpx;
+}
+.container .health .searchbox .searchinput input {
+  font-size: 28rpx;
+}
+.container .health .category_menu {
+  width: 100%;
+  display: flex;
+  margin-right: 20rpx;
+  padding: 30rpx 0 0 20rpx;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #F3F4F6;
+  margin-top: 20rpx;
+}
+.container .health .category_menu .sljl {
+  width: 20%;
+  height: calc(100vh - 200rpx);
+}
+.container .health .category_menu .sljl .left_menu {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 0;
+}
+.container .health .category_menu .sljl .left_menu .menu_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.container .health .category_menu .sljl .left_menu .menu_item .fu_item {
+  width: 100%;
+  padding: 28rpx 0rpx;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #8C9198;
+}
+.container .health .category_menu .sljl .left_menu .menu_item .active {
+  position: relative;
+  font-size: 28rpx;
+  color: #06121E;
+  font-weight: 600;
+  background-color: #fff;
+}
+.container .health .category_menu .sljl .left_menu .menu_item .active::after {
+  content: '';
+  position: absolute;
+  top: 28rpx;
+  left: 0;
+  width: 8rpx;
+  height: 36rpx;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+  border-radius: 4rpx;
+}
+.container .health .category_menu .sljl .left_menu .menu_item .menu_item_child {
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .health .category_menu .sljl .left_menu .menu_item .menu_item_child .child_ {
+  margin: 10rpx 0;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border: 1rpx solid #ccc;
+}
+.container .health .category_menu .sljl .left_menu .menu_item .menu_item_child .menu_item:first-child {
+  margin-top: 10rpx;
+}
+.container .health .category_menu .less_right {
+  width: 78%;
+  position: absolute;
+  top: 0;
+  right: 0rpx;
+}
+.container .health .category_menu .less_right .aright {
+  width: 100%;
+  background-color: #F3F4F6;
+  min-height: 100%;
+}
+.container .health .category_menu .less_right .aright .nav_top_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx 0 0;
+  box-sizing: border-box;
+}
+.container .health .category_menu .less_right .aright .nav_top_list .bind_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+}
+.container .health .category_menu .less_right .aright .nav_top_list .bind_item .li_area {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+}
+.container .health .category_menu .less_right .aright .nav_top_list .bind_item .titleIndex_active {
+  color: #ff863d;
+  font-weight: 600;
+}
+.container .health .category_menu .less_right .aright .nav_top_list .bind_item image {
+  width: 32rpx;
+}
+.container .health .category_menu .less_right .aright .cate_list {
+  width: 100%;
+  padding-right: 14rpx;
+  box-sizing: border-box;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list {
+  float: left;
+  width: 50%;
+  padding: 8rpx;
+  box-sizing: border-box;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group {
+  width: 100%;
+  border-radius: 16rpx;
+  background-color: #fff;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .big_img {
+  width: 100%;
+  height: 264rpx;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .down_img {
+  width: 100%;
+  padding: 0 18rpx 20rpx;
+  box-sizing: border-box;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .down_img .tille {
+  width: 100%;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #333333;
+  line-height: 36rpx;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .down_img .down_li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .down_img .down_li .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .down_img .down_li .pt .pt_icon {
+  font-size: 18rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .down_img .down_li .pt .pt_price {
+  font-size: 24rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group .down_img .down_li image {
+  width: 34rpx;
+  height: 34rpx;
+}
+.container .health .category_menu .less_right .aright .cate_list .right_menu .good_list .goods_group ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

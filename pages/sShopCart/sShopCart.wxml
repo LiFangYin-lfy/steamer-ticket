@@ -1,0 +1,84 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">购物车</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="list_cate" wx:if="{{shopList.length!=0}}">
+      <view class="del_img" bindtap="delChangeStore" wx:if="{{is_del == true}}">
+        <image src="{{imagesUrl}}/img_41.png" />
+      </view>
+      <block wx:for="{{shopList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="value_item">
+          <view class="change_img" catchtap="radioItem" data-item="{{item}}" data-index='{{index}}'>
+            <image src="{{imagesUrl}}/img_36.png" wx:if="{{item.is_cloose==0}}" />
+            <image src="{{imagesUrl}}/img_37.png" wx:else />
+          </view>
+          <view class="bos_cart" catchtap="goDteails" data-goods_id="{{item.goods_id}}">
+            <view class="left_image">
+              <image src="{{item.image}}" class="item_img" />
+              <view class="newpin" wx:if="{{item.flag !=''}}">
+                <view class="vipim">{{item.flag}}</view>
+              </view>
+            </view>
+            <view class="right_cart">
+              <view class="top_carts">
+                <view class="titles title_content2">{{item.goods_name}}</view>
+                <view class="piao_c">{{item.goods_sku.goods_attr}}</view>
+                <view class="piao_c" wx:if="{{item.date!=''}}">{{item.date}}</view>
+              </view>
+              <view class="down_carts">
+                <view class="pt">
+                  <view class="pt_icon">¥</view>
+                  <view class="pt_price">{{item.goods_sku.goods_price}}</view>
+                </view>
+                <view class="rig">
+                  <view class="img_j" catchtap="onClickMinus" data-index="{{index}}" data-goods_id="{{item.goods_id}}" data-goods_sku_id="{{item.goods_sku_id}}">
+                    <image src="{{imagesUrl}}/img_30.png" />
+                  </view>
+                  <view class="img_2">
+                    <view class="count">{{item.total_num}}</view>
+                  </view>
+                  <view class="img_j" catchtap="onClickAdd" data-goods_id="{{item.goods_id}}" data-goods_sku_id="{{item.goods_sku_id}}">
+                    <image src="{{imagesUrl}}/img_29.png" />
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="cno" wx:else>
+      <view class="kongbox" wx:if="{{it_cloose== true}}">
+        <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+        <view class="c_name">暂无数据</view>
+      </view>
+    </view>
+  </view>
+  <view class="downboxs" wx:if="{{shopList.length!=0}}">
+    <view class="wai_boss">
+      <view class="boxs_do">
+        <view class="ld_all" catchtap="allItem">
+          <image src="{{imagesUrl}}/img_37.png" wx:if="{{all_cloose}}" />
+          <image src="{{imagesUrl}}/img_36.png" wx:else />
+          <view class="all_name">全选</view>
+        </view>
+        <view class="rih">
+          <view class="heji">合计</view>
+          <view class="pt">
+            <view class="pt_icon">¥</view>
+            <view class="pt_price">{{orderTotal}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="suan" bindtap="toResult">
+        <view class="suan_name">去结算{{idList.length !=0?'(' +idList.length+')':''}}</view>
+      </view>
+    </view>
+  </view>
+</view>

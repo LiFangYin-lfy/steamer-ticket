@@ -1,0 +1,265 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.2",
+  "appid": "wx68a9a8aa22f0dd86",
+  "projectname": "steamer-ticket",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/navStore/navStore",
+          "pathName": "pages/navStore/navStore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sStoreDeatils/sStoreDetails",
+          "pathName": "pages/sStoreDeatils/sStoreDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/navStrategy/navStrategy",
+          "pathName": "pages/navStrategy/navStrategy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/navMe/navMe",
+          "pathName": "pages/navMe/navMe",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sAddressStatus/sAddressStatus",
+          "pathName": "pages/sAddressStatus/sAddressStatus",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myNoticeDetail/myNoticeDetail",
+          "pathName": "pages/myNoticeDetail/myNoticeDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/optionCalendar/optionCalendar",
+          "pathName": "pages/optionCalendar/optionCalendar",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/optionDate/optionDate",
+          "pathName": "pages/optionDate/optionDate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/fillOrder/fillOrder",
+          "pathName": "pages/fillOrder/fillOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/robTickets/robTickets",
+          "pathName": "pages/robTickets/robTickets",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/navStore/navStore",
+          "pathName": "pages/navStore/navStore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sStoreDeatils/sStoreDetails",
+          "pathName": "pages/sStoreDeatils/sStoreDetails",
+          "query": "goods_id=22",
+          "scene": null
+        },
+        {
+          "name": "pages/optionDate/optionDate",
+          "pathName": "pages/optionDate/optionDate",
+          "query": "goods_id=22",
+          "scene": null
+        },
+        {
+          "name": "pages/navHome/navHome",
+          "pathName": "pages/navHome/navHome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/robTickets/robTickets",
+          "pathName": "pages/robTickets/robTickets",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sStoreDeatils/sStoreDetails",
+          "pathName": "pages/sStoreDeatils/sStoreDetails",
+          "query": "goods_id=22",
+          "scene": null
+        },
+        {
+          "name": "pages/sStoreConfirm/sStoreConfirm",
+          "pathName": "pages/sStoreConfirm/sStoreConfirm",
+          "query": "goods_id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/sMyAddress/sMyAddress",
+          "pathName": "pages/sMyAddress/sMyAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/navStore/navStore",
+          "pathName": "pages/navStore/navStore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myOrder/myOrder",
+          "pathName": "pages/myOrder/myOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sShopCart/sShopCart",
+          "pathName": "pages/sShopCart/sShopCart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/fillAddOrder/fillAddOrder",
+          "pathName": "pages/fillAddOrder/fillAddOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/fillOrder/fillOrder",
+          "pathName": "pages/fillOrder/fillOrder",
+          "query": "id=92",
+          "scene": null
+        },
+        {
+          "name": "pages/myOrder/myOrder",
+          "pathName": "pages/myOrder/myOrder",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "pages/sShopCart/sShopCart",
+          "pathName": "pages/sShopCart/sShopCart",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "pages/myOrder/myOrder",
+          "pathName": "pages/myOrder/myOrder",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "pages/tabCounsel/tabCounsel",
+          "pathName": "pages/tabCounsel/tabCounsel",
+          "query": "order_id=18",
+          "scene": null
+        },
+        {
+          "name": "pages/tabCounsel/tabCounsel",
+          "pathName": "pages/tabCounsel/tabCounsel",
+          "query": "order_id=18",
+          "scene": null
+        },
+        {
+          "name": "pages/robTickets/robTickets",
+          "pathName": "pages/robTickets/robTickets",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tabCounsel/tabCounsel",
+          "pathName": "pages/tabCounsel/tabCounsel",
+          "query": "id=2",
+          "scene": null
+        },
+        {
+          "name": "pages/drawback/drawback",
+          "pathName": "pages/drawback/drawback",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/navHome/navHome",
+          "pathName": "pages/navHome/navHome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myTicket/myTicket",
+          "pathName": "pages/myTicket/myTicket",
+          "query": "id=35",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

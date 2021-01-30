@@ -1,0 +1,154 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(to right, #ffb94c, #ff893e);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+}
+.container .health .nav_top_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx 0 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EBEDF0;
+}
+.container .health .nav_top_list .bind_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+}
+.container .health .nav_top_list .bind_item .li_area {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+}
+.container .health .nav_top_list .bind_item .titleIndex_active {
+  color: #FFB740;
+  font-weight: 600;
+}
+.container .health .nav_top_list .bind_item image {
+  width: 32rpx;
+}
+.container .health .lists {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.container .health .lists .list_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EBEDF0;
+}
+.container .health .lists .list_item image {
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 8rpx;
+  flex-shrink: 0;
+}
+.container .health .lists .list_item .right_items {
+  flex: 1;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .list_item .right_items .test_ {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 44rpx;
+}
+.container .health .lists .list_item .right_items .it_bx {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+.container .health .lists .list_item .right_items .it_bx .bx_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+  border-right: 1rpx solid #DCDEE0;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .list_item .right_items .it_bx .bx_name:first-child {
+  padding-left: 0;
+}
+.container .health .lists .list_item .right_items .xiao {
+  margin-bottom: 16rpx;
+}
+.container .health .lists .list_item .right_items .xiao .s_xiao_s {
+  background: #fff2df;
+  border: 1rpx solid #ffb23c;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffb23c;
+  line-height: 32rpx;
+  padding: 5rpx 10rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .list_item .right_items .pt {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+.container .health .lists .list_item .right_items .pt .pt_icon {
+  font-size: 18rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .health .lists .list_item .right_items .pt .pt_price {
+  font-size: 24rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .health .lists .list_item:last-child {
+  border: 0 none;
+}

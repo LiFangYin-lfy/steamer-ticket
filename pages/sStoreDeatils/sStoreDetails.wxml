@@ -1,0 +1,221 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">商品详情</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="top_img">
+      <swiper class="banner" indicator-dots indicator-color="rgba(255, 255, 255, 0.6)" indicator-active-color="#fff">
+        <swiper-item wx:for="{{detailsImg}}" wx:key="index" wx:for-item="item" wx:for-index="index">
+          <image src="{{item}}" mode="aspectFill" data-src='{{item}}' data-list='{{detailsImg}}' bindtap="previewImage" />
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="detail_bx">
+      <view class="pt">
+        <view class="pt_icon">¥</view>
+        <view class="pt_price">{{details.goods_price}}</view>
+      </view>
+      <view class="det_center">
+        <view class="left_det">
+          <view class="news" wx:if="{{details.flag !=''}}">{{details.flag}}</view>
+          <view class="it_bx">
+            <!-- <block wx:for="{{four}}" wx:for-index="indexs" wx:key="indexs" wx:for-item="items" wx:if="{{indexs <3}}"> -->
+            <view class="bx_name">{{details.description}}</view>
+            <!-- </block> -->
+          </view>
+        </view>
+        <view class="montd">月销{{details.goods_sales}}</view>
+      </view>
+      <view class="titles_name  title_content2">{{details.goods_name}}</view>
+    </view>
+    <view class="announcements">
+      <view class="annou">
+        <view class="ments">注意事项</view>
+        <view class="ments_test">
+          <text class="met">{{details.notice}}</text>
+          <!-- <import src="../../wxParse/wxParse.wxml" />
+          <template is="wxParse" data="{{wxParseData:notice.nodes}}" /> -->
+        </view>
+      </view>
+    </view>
+    <view class="rule_ge" wx:if="{{spec_type!=10}}">
+      <view class="rule_box" bindtap="clickrule">
+        <view class="rule_name">规格</view>
+        <view class="rule_bt">
+          <view class="rule_test">{{details.goods_attr}}</view>
+          <image src="{{imagesUrl}}/img_28.png" />
+        </view>
+      </view>
+    </view>
+    <view class="appress">
+      <view class="app_bosx">
+        <view class="app_box">
+          <view class="app_name">用户评价</view>
+          <view class="app_bt" bindtap="gosAllEvaluate" data-count="{{details.comment_count}}">
+            <view class="app_test">查看全部{{details.comment_count}}</view>
+            <image src="{{imagesUrl}}/img_28.png" />
+          </view>
+        </view>
+        <view class="prise" wx:if="{{comment.length !=0 }}">
+          <block wx:for="{{comment}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="pr_list">
+              <view class="top_head">
+                <image src="{{item.user.avatar}}" class="head_img" />
+                <view class="hed_right">
+                  <view class="hed_nam">
+                    <view class="h_names">{{item.user.nickname}}</view>
+                    <view class="star">
+                      <view class="iims">
+                        <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=1 }}" class="lims" />
+                        <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                        <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=2 }}" class="lims" />
+                        <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                        <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=3 }}" class="lims" />
+                        <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                        <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=4 }}" class="lims" />
+                        <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                        <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=5 }}" class="lims" />
+                        <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                      </view>
+                    </view>
+                  </view>
+                  <view class="date">{{item.createtime}}</view>
+                </view>
+              </view>
+              <view class="pr_tst">{{item.content}}</view>
+              <view class="pr_imgs">
+                <block wx:for="{{item.images}}" wx:for-index="index1" wx:for-item="item1" wx:key="index1">
+                  <image data-src='{{item1}}' data-list='{{item.images}}' bindtap="previewImage" src="{{item1}}" class="imgst" />
+                </block>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="details_img">
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+  </view>
+  <view class="down_btns">
+    <view class="btns_lis">
+      <view class="img_btn">
+        <view class="items" bindtap="onCllected" data-goods_id="{{details.goods_id}}">
+          <image src="{{imagesUrl}}/img_20.png" wx:if="{{details.collect== 1}}" />
+          <image src="{{imagesUrl}}/img_24.png" wx:else />
+          <view class="items_text {{details.collect== 1?'collect_colir' :''}}">收藏</view>
+        </view>
+        <view class="items" bindtap="onCarted">
+          <image src="{{imagesUrl}}/img_23.png" />
+          <view class="items_text">购物车</view>
+          <view class="con" wx:if="{{count !=0}}">
+            <view class="counts">{{count}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="right_btns">
+        <view class="bettn buy" bindtap="clickOpen" data-type="0">加入购物车</view>
+        <view class="bettn pay" bindtap="clickOpen" data-type="1">立即购买</view>
+      </view>
+    </view>
+  </view>
+  <!-- 屏幕背景变暗的背景 -->
+  <view class="commodity_screen" bindtap="hideModal" catchtouchmove="return" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}" catchtouchmove="return">
+    <view class="hdbox">
+      <view class="updown" bindtap="hideModal">
+        <image src="{{imagesUrl}}/img_31.png" />
+      </view>
+      <view class="buyStore">
+        <view class="storeImg">
+          <image src="{{details.image}}" />
+        </view>
+        <view class="store_cont">
+          <view class="pt">
+            <view class="pt_icon">¥</view>
+            <view class="pt_price">{{newPrice}}</view>
+          </view>
+          <view class="title_content col_s">{{details.goods_name}}</view>
+        </view>
+      </view>
+      <!-- 规格 -->
+      <view class="cond">
+        <scroll-view scroll-y='true' style="height :800rpx">
+          <view class="rules_scroll">
+            <block wx:for="{{spec_attr}}" wx:key="index0" wx:for-index="index0" wx:for-item="item0">
+              <view class="left_more">
+                <view class="guimore">{{item0.group_name}}</view>
+                <view class="change_more">
+                  <block wx:for="{{item0.spec_items}}" wx:key="index1" wx:for-index="index1" wx:for-item="item1">
+                    <view class="down {{item1.is_cloose == 1? 'actived':''}}" bindtap="onclickSelected" data-index1="{{index1}}" data-index0="{{index0}}">
+                      <view class="downName">{{item1.spec_value}}</view>
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class="card_time  car" wx:if="{{details.date_status == 1}}">
+            <view class="car_title">选择时间</view>
+            <view class="change_4S">
+              <picker mode="date" style="display :block; width: 100%;height: 88rpx;" value="{{buy_time}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindTimeChange" name="buy_time">
+                <view class="picker_box">
+                  <view class="picker_1  {{buy_time != ''? 'buy_time':'' }}">
+                    {{buy_time == ''? '请选择购买时间':buy_time}}
+                  </view>
+                  <view class="rowimg">
+                    <image src="{{imagesUrl}}/img_28.png" />
+                  </view>
+                </view>
+              </picker>
+            </view>
+          </view>
+          <!-- 数量 -->
+          <view class="number">
+            <view class="left_num">数量</view>
+            <view class="right_num">
+              <view class="jian_img itemImg_" bindtap="countMinus">
+                <image src="{{imagesUrl}}/img_30.png" />
+              </view>
+              <view class="center_num  itemImg_">{{goods_num}}</view>
+              <view class="jia_img  itemImg_" bindtap="countPlus">
+                <image src="{{imagesUrl}}/img_29.png" />
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="btnbuy">
+        <button class="btnbuy__" size="default" wx:if="{{openType == 0}}" bindtap="addstore">
+          确认
+        </button>
+        <button class="btnbuy__" size="default" wx:if="{{openType == 1}}" bindtap="buyStore">
+          确认
+        </button>
+      </view>
+    </view>
+  </view>
+  <!-- 登录弹窗 -->
+  <view class="opended" wx:if="{{openvar ==true}}" bindtap="onClickOpen" catchtouchmove="consume"></view>
+  <view class="open_car" wx:if="{{openvar == true}}">
+    <view class="car_luie">
+      <view class="box_Logins">
+        <view class="box_login">提示</view>
+        <view class="login_content">您尚未登录，是否要授权登录</view>
+        <view class="butns">
+          <button class="login_false" bindtap="onClickOpen">取消</button>
+          <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="login_true">
+            <image src="../../static/img/img_101.png" />
+            <view class="img">确认</view>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

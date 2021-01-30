@@ -1,0 +1,22 @@
+<view class='row day-wrap item-center'>
+  <view class='month fs-28 fc-66 shrink'>
+    <text class='fs-48'>{{showCurrentMonth}}</text>
+    月
+  </view>
+  <view class='day-list grow over-hidden'>
+    <scroll-view scroll-x="{{true}}" class='day-list-scroll row' bindscroll="dayScroll" scroll-left="{{scrollLeftInit}}px">
+      <view class="day-item {{prevMonth.weekDay == weekday ? 'weekday' : ''}}" wx:for="{{prevMonthDateArray}}" wx:for-item="prevMonth" id="day{{month}}{{prevMonth.day}}">
+        <view class='fs-24'>{{prevMonth.weekDay}}</view>
+        <view class='fs-32 mt-3'>{{prevMonth.day}}</view>
+      </view>
+      <view class="day-item {{currentMonth.day == day ? 'today' : ''}} {{currentMonth.weekDay == weekday ? 'weekday' : ''}}" wx:for="{{currentMonthDateArray}}" wx:for-item="currentMonth" id="day{{month+1}}{{currentMonth.day}}">
+        <view class='fs-24'>{{currentMonth.weekDay}}</view>
+        <view class='fs-32 mt-3'>{{currentMonth.day}}</view>
+      </view>
+      <view class="day-item {{nextMonth.weekDay == weekday ? 'weekday' : ''}}" wx:for="{{nextMonthDateArray}}" wx:for-item="nextMonth" id="day{{month+2}}{{nextMonth.day}}">
+        <view class='fs-24'>{{nextMonth.weekDay}}</view>
+        <view class='fs-32 mt-3'>{{nextMonth.day}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

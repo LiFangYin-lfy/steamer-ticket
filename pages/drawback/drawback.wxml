@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">申请售后</view>
+    </view>
+  </view>
+  <view class="health">
+    <concat />
+    <!-- <form action="" bindsubmit="submitMark"> -->
+    <view class="tui_money">
+      <view class="tui_name">退款金额</view>
+      <view class="pt">
+        <view class="pt_icon">￥</view>
+        <view class="pt_price">{{pay}}</view>
+      </view>
+    </view>
+    <view class="wai_store_2">
+      <view class="maijia">
+        <view class="mai_name">退款原因</view>
+        <view class="teas">
+          <textarea placeholder-class="textarea_placeholder" name="remark" bindinput="getTextarea" placeholder="填写退款原因"></textarea>
+        </view>
+      </view>
+    </view>
+    <view class="wai_store_3">
+      <view class="tongzhi">
+        <view class="zhi">
+          <image src="{{imagesUrl}}/img_32.png" />
+          <view class="zi_name">退改规则</view>
+        </view>
+        <view class="details_img">
+          <import src="../../wxParse/wxParse.wxml" />
+          <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+        </view>
+      </view>
+    </view>
+    <!-- </form> -->
+  </view>
+  <view class="submit_btn">
+    <view class="mit_bn">
+      <button disabled="{{is_true}}" class="submit" bindtap="submitMark">提交</button>
+    </view>
+  </view>
+</view>

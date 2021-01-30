@@ -1,0 +1,174 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">我的船票</view>
+    </view>
+  </view>
+  <view class="health">
+    <view class="ticket">
+      <view class="items" bindtap="goOrderDetail">
+        <view class="top_o">
+          <view class="lft_ig">
+            <image src="{{imagesUrl}}/img_51.png" />
+            <view class="store_name">船票订单</view>
+          </view>
+          <view class="order_status">{{ticket.status_text}}</view>
+        </view>
+        <view class="top_otr">
+          <view class="mudi">
+            <view class="start_go">{{ticket.start}}</view>
+            <view class="from_go">——</view>
+            <view class="end_to  start_go">{{ticket.end}}</view>
+          </view>
+          <view class="go_way">
+            <view class="ong">
+              <image src="{{imagesUrl}}/img_53.png" />
+              <view class="ong_name">
+                {{ticket.line.shipName}}   {{ticket.line_cabin.cabinName}}
+              </view>
+            </view>
+            <view class="ong">
+              <image src="{{imagesUrl}}/img_54.png" />
+              <view class="ong_name">{{ticket.date}} {{ticket.start_time}}启程</view>
+            </view>
+          </view>
+          <view class="ong_tohe" wx:if="{{ticket.status == 10}}">
+            <image src="{{imagesUrl}}/img_52.png" />
+            <view class="ong_name">剩余支付时间：</view>
+            <view class="ong_res  ong_name">
+              <van-count-down time="{{  time }}" style="color: #7d7e80;" class="piao_time" />
+            </view>
+          </view>
+          <view class="totals">
+            <view class="zong">{{ticket.status == 10?'待付款：' : '已付款：'}}</view>
+            <view class="pt">
+              <view class="pt_icon">¥</view>
+              <view class="pt_price">{{ticket.pay_price}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="tuikuan_list" wx:if="{{refund.length!=0}}">
+        <block wx:for="{{refund}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="tui_nae">
+            <view class="tui_item">
+              <view class="t_name">{{item.status_text}}</view>
+              <view class="pt">
+                <view class="pt_icon">¥</view>
+                <view class="pt_price">{{item.price}}</view>
+              </view>
+            </view>
+            <view class="tui_date">
+              <view class="date_name">退款日期</view>
+              <view class="date_text">{{item.createtime}}</view>
+            </view>
+            <view class="tuikuan" wx:if="{{item.status == 3}}">
+              <view class="bohui">
+                <view class="bo_name">驳回原因</view>
+                <view class="text_name">{{item.remark}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="info">
+        <view class="info_name">登船码头信息</view>
+        <view class="piao">
+          <view class="getpiao">
+            <view class="beihai">北海</view>
+            <view class="beihai_img">
+              <image src="../../static/img/img_111.png" />
+            </view>
+            <view class="beihai">涠洲</view>
+          </view>
+          <view class="inpduts">
+            <view class="title_ma">北海国际客运港</view>
+            <view class="title_ma">地址：北海市银海区银滩旅游区18号</view>
+          </view>
+        </view>
+        <view class="piao">
+          <view class="getpiao">
+            <view class="beihai">涠洲</view>
+            <view class="beihai_img">
+              <image src="../../static/img/img_111.png" />
+            </view>
+            <view class="beihai">北海</view>
+          </view>
+          <view class="inpduts">
+            <view class="title_ma">涠洲岛西角码头</view>
+            <view class="title_ma">地址：涠洲岛西角路</view>
+          </view>
+        </view>
+      </view>
+      <view class="downpo">
+        <view class="op_piao">
+          <view class="one_ie">
+            <view class="one_anme">{{ticket.start}}</view>
+            <view class="titme">{{ticket.line.plannedDepartureTime}}</view>
+          </view>
+          <view class="tw_date">
+            <view class="top_nm">{{ticket.line.run_time}}</view>
+            <view class="center_img">
+              <image src="{{imagesUrl}}/img_56.png" />
+            </view>
+            <view class="down_nm">{{ticket.line.plannedArrivalDate}}</view>
+          </view>
+          <view class="one_right">
+            <view class="one_anme">{{ticket.end}}</view>
+            <view class="titme">{{ticket.line.plannedArrivalTime}}</view>
+          </view>
+        </view>
+        <view class="per_box">
+          <block wx:for="{{ticket.line_order_member}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <view class="per_info">
+              <view class="per_name">{{item.name}} {{item.line_type_name}}</view>
+              <view class="total_pri">
+                <view class="bos_pto">
+                  <view class="prr_name">{{item.type}}</view>
+                  <view class="test">{{item.number}}</view>
+                </view>
+                <image src="{{imagesUrl}}/img_28.png" />
+              </view>
+              <view class="total_pri">
+                <view class="prr_name">下单时间</view>
+                <view class="test">{{ticket.pay_time_text}}</view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="order_num">
+        <view class="sdg sd_g">
+          <view class="prr_name">订单编号</view>
+          <view class="test_pry">{{ticket.order_no}}</view>
+        </view>
+        <view class="sdg">
+          <view class="prr_name">购买凭证</view>
+          <view class="ticketNotice">
+            <!-- <import src="../../wxParse/wxParse.wxml" />
+                        <template is="wxParse" data="{{wxParseData:notice.nodes}}" /> -->
+            <rich-text nodes="{{notice}}"></rich-text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bny_btn">
+    <view class="bit_btn">
+      <view class="bt_emp btnmargin" data-id="{{ticket.id}}" catchtap="cancelTicket" wx:if="{{ticket.status == 10}}">
+        取消订单
+      </view>
+      <view class="bt_bg btnmargin" data-id="{{ticket.id}}" catchtap="payTicket" wx:if="{{ticket.status == 10}}">
+        支付
+      </view>
+      <view class="bt_emp btnmargin" data-id="{{ticket.id}}" catchtap="editotTicket" wx:if="{{ticket.status  == 40}}">
+        改签
+      </view>
+      <view class="bt_bg btnmargin" data-id="{{ticket.id}}" catchtap="goDrawback" data-pay="{{ticket.refund_price}}" wx:if="{{ticket.status  == 30 ||  ticket.status  == 40}}">
+        申请退款
+      </view>
+    </view>
+  </view>
+</view>

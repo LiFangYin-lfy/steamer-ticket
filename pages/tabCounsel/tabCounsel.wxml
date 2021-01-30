@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">评价</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="list">
+      <block wx:for="{{order_list}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="lit_item">
+          <view class="sote_box">
+            <view class="store_name">商品信息</view>
+            <view class="store_o">
+              <image src="{{item.image}}" />
+              <view class="ri_store">
+                <view class="title_one title_content2">{{item.goods_name}}</view>
+                <view class="down_store">
+                  <view class="rulw">{{item.goods_attr}}</view>
+                  <view class="num">x{{item.total_num}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="stoe_prise">
+            <view class="appraise">
+              <view class="arr_name">评价等级</view>
+              <view class="star">
+                <view class="iims">
+                  <block wx:for="{{item.star}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
+                    <image data-index='{{index}}' data-index1='{{index1}}' bindtap="selectStar" src="{{item1}}" class="lims" />
+                  </block>
+                </view>
+              </view>
+            </view>
+            <view class="areas">
+              <textarea placeholder="请输入商品评价" value="{{item.textarea}}" maxlength="300" bindinput="getcursor" bindblur="getconfirm" placeholder-class="input_placeholder" data-index="{{index}}"></textarea>
+              <view class="numb">300/{{item.cursor}}</view>
+            </view>
+            <!-- <scroll-view scroll-x="true" style="width:750rpx"> -->
+            <view class='uploader_img  flex justify-content-start' wx:if="{{imgList.length !=0}}">
+              <view class='uploader_list'>
+                <block wx:for="{{item.images}}" wx:key="index1" wx:for-item="item1" wx:for-index='index1'>
+                  <view class="s_detlte">
+                    <image src='{{item1}}' class="pictures" data-index="{{index}}" data-index1="{{index1}}" mode="scaleToFill" catchtap='previewImg1' />
+                    <image class='delete' data-index1="{{index1}}" data-index='{{index}}' src='{{imagesUrl}}/img_94.png' mode="widthFix" catchtap='deleteImg' />
+                  </view>
+                </block>
+                <view class='upAdd' bindtap='chooseImg' data-index='{{index}}'>
+                  <image src='{{imagesUrl}}/img_93.png' mode="widthFix" />
+                </view>
+              </view>
+            </view>
+            <!-- </scroll-view> -->
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="submit_btn">
+      <view class="mit_bn">
+        <button disabled="{{is_true}}" class="submit" bindtap="release">发布</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,85 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <view class="title_oage">商城</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="searchbox">
+      <view class="searchinput" bindtap="goSearch">
+        <image class="searchicon" src="{{imagesUrl}}/img_21.png" mode=""></image>
+        <input bindblur="navtosearch" bindconfirm="getInput" type="text" placeholder="搜索您想要的商品" placeholder-style="color:#C8C9CC;font-size:28rpx" value="" />
+      </view>
+      <view class="pic" bindtap="gosShopCart">
+        <image src="{{imagesUrl}}/img_1.png"></image>
+        <view class="pic_count" wx:if="{{count!=0}}">
+          <view class="coun">{{count}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="category_menu">
+      <view class="sljl">
+        <scroll-view class="left_menu" scroll-y="true">
+          <view class="menu_item" wx:for="{{leftCates}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+            <view class="fu_item {{currentIndex ==index  ? 'active' :''}}" bindtap="itemTap" data-id="{{item.id}}" data-index="{{index}}">
+              {{item.name}}
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="less_right">
+        <view class="aright">
+          <view class="nav_top_list">
+            <view class="bind_item" bindtap="gosMoreList" data-types="1">
+              <view class="li_area {{titleIndex ==1  ? 'titleIndex_active' :''}} ">综合</view>
+            </view>
+            <view class="bind_item" bindtap="gosMoreList" data-types="2">
+              <view class="li_area {{titleIndex ==2  ? 'titleIndex_active' :''}} ">最新</view>
+            </view>
+            <view class="bind_item" bindtap="gosMoreList" data-types="{{type_num}}">
+              <view class="li_area {{titleIndex ==3 ||  titleIndex ==4 ? 'titleIndex_active' :''}} ">
+                价格
+              </view>
+              <image mode="widthFix" src="{{imagesUrl}}/img_22.png" />
+            </view>
+            <view class="bind_item" bindtap="gosMoreList" data-types="5">
+              <view class="li_area {{titleIndex ==5  ? 'titleIndex_active' :''}} ">销量</view>
+              <image mode="widthFix" src="{{imagesUrl}}/img_22.png" />
+            </view>
+          </view>
+          <view class="cate_list" scroll-y="true" scroll-top="{{scroll_top}}">
+            <scroll-view class="right_menu">
+              <block wx:if="{{cateList2.length !=0}}">
+                <block wx:for="{{cateList2}}" wx:for-item="item" wx:key="index" wx:for-index="index">
+                  <view class="good_list" bindtap="godetails" data-goods_id="{{item.goods_id}}">
+                    <view class="goods_group">
+                      <image src="{{item.image}}" class="big_img" mode="" />
+                      <view class="down_img">
+                        <view class="title_content1 tille">{{item.goods_name}}</view>
+                        <view class="down_li">
+                          <view class="pt">
+                            <view class="pt_icon">¥</view>
+                            <view class="pt_price">{{item.goods_min_price}}</view>
+                          </view>
+                          <image src="{{imagesUrl}}/img_2.png" />
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </block>
+              <view class="cno" wx:else>
+                <view class="kongbox" wx:if="{{it_cloose== true}}">
+                  <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+                  <view class="c_name">暂无数据</view>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

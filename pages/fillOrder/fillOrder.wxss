@@ -1,0 +1,553 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  /* 弹窗 */
+  /*使屏幕变暗  */
+  /*对话框 */
+  /* 弹窗 */
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .header .tip_bbt {
+  width: 100%;
+  padding: 32rpx 32rpx 120rpx;
+  box-sizing: border-box;
+}
+.container .header .tip_bbt .tio_a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .header .tip_bbt .tio_a image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
+  flex-shrink: 0;
+}
+.container .header .tip_bbt .tio_a .tia_a {
+  flex: 1;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 44rpx;
+}
+.container .header .tip_bbt .tio_b {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  box-sizing: border-box;
+}
+.container .header .tip_bbt .tio_b .tia_b {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 40rpx;
+  margin-right: 30rpx;
+}
+.container .header .tip_bbt .tio_b .tia_c {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container .header .tip_bbt .tio_b .tia_c .admin {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.container .header .tip_bbt .tio_b .tia_c .admin .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .header .tip_bbt .tio_b .tia_c .admin .pt .pt_icon {
+  font-size: 22rpx;
+  color: #fff;
+  font-weight: 500;
+}
+.container .header .tip_bbt .tio_b .tia_c .admin .pt .pt_price {
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: 500;
+}
+.container .header .tip_bbt .tio_b .tia_c .admin .per {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  line-height: 40rpx;
+}
+.container .header .tip_bbt .tio_b .tia_d {
+  width: 100%;
+  font-size: 22rpx;
+  color: #fff;
+}
+.container .header .tip_bbt .tio_c {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 16rpx;
+  box-sizing: border-box;
+}
+.container .header .tip_bbt .tio_c image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
+  flex-shrink: 0;
+}
+.container .header .tip_bbt .tio_c .tia_d {
+  flex: 1;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #ffffff;
+  line-height: 40rpx;
+  letter-spacing: 1rpx;
+}
+.container .health {
+  width: 100%;
+}
+.container .health .tan_pop {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  margin-top: -115rpx;
+}
+.container .health .tan_pop .pop_ox {
+  width: 100%;
+  padding: 14rpx 32rpx 14rpx;
+  box-sizing: border-box;
+  background: #f5f6f8;
+  border-radius: 16rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .tan_pop .pop_ox .ke_names {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 600;
+  color: #323233;
+  line-height: 40rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.container .health .tan_pop .pop_ox .add_ke {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5rpx 0;
+  box-sizing: border-box;
+}
+.container .health .tan_pop .pop_ox .add_ke image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+.container .health .tan_pop .pop_ox .add_ke .add_name {
+  flex: 1;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffa230;
+  line-height: 40rpx;
+}
+.container .health .tan_pop .pop_ox .ke_list {
+  width: 100%;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.container .health .tan_pop .pop_ox .ke_list .lis_le {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .health .tan_pop .pop_ox .ke_list .lis_le .ke_item {
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #5e5e60;
+  line-height: 34rpx;
+  background: #ededed;
+  border-radius: 4rpx;
+  margin: 5rpx 20rpx 5px 0;
+}
+.container .health .tan_pop .pop_ox .ke_list .lis_le .ke_item:last-child {
+  margin-right: 0;
+}
+.container .health .tan_pop .pop_ox .phone {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  border-top: 1rpx solid #f5f5f5;
+}
+.container .health .tan_pop .pop_ox .phone .ph_b {
+  display: flex;
+  align-items: center;
+}
+.container .health .tan_pop .pop_ox .phone .ph_b .ph_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .tan_pop .pop_ox .phone .ph_b .i_name {
+  color: #ff0000;
+  width: 12rpx;
+}
+.container .health .tan_pop .pop_ox .phone .ins {
+  flex: 1;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .tan_pop .pop_ox .phone .ins .phone_input {
+  width: 100%;
+}
+.container .health .order_tongzhi {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  margin-bottom: 24rpx;
+}
+.container .health .order_tongzhi .order_s {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  background: #f5f6f8;
+  border-radius: 16rpx;
+  box-shadow: 0rpx 12rpx 32rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .order_tongzhi .order_s .tong {
+  display: flex;
+  align-items: center;
+}
+.container .health .order_tongzhi .order_s .tong image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .health .order_tongzhi .order_s .tong .tong_nan {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #323233;
+  line-height: 40rpx;
+  margin-left: 16rpx;
+}
+.container .health .order_tongzhi .order_s .arrow {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .health .tongys {
+  width: 100%;
+  display: flex;
+  padding: 24rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .health .tongys .chan {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+.container .health .tongys .chan image {
+  width: 100%;
+}
+.container .health .tongys .lode .gou {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #1989fa;
+  line-height: 40rpx;
+}
+.container .health .tongys .lode .gou_xuan {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #7D7E80;
+  line-height: 40rpx;
+}
+.container .down_btns {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+}
+.container .down_btns .downs {
+  width: 100%;
+  padding: 16rpx 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .down_btns .downs .lis {
+  display: flex;
+  align-items: center;
+}
+.container .down_btns .downs .lis .lis_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #323233;
+  line-height: 34rpx;
+  margin-right: 16rpx;
+}
+.container .down_btns .downs .lis .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .down_btns .downs .lis .pt .pt_icon {
+  font-size: 26rpx;
+  color: #FF4115;
+  font-weight: 600;
+}
+.container .down_btns .downs .lis .pt .pt_price {
+  font-size: 36rpx;
+  color: #FF4115;
+  font-weight: 600;
+}
+.container .down_btns .downs .butto {
+  width: 240rpx;
+  height: 88rpx;
+  background: #ffa230;
+  border-radius: 200rpx;
+}
+.container .down_btns .downs .butto .bt {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  line-height: 88rpx;
+}
+.container .commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.container .commodity_attr_box {
+  height: 800rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #f5f6f8;
+  border-radius: 16rpx 16rpx 0rpx 0rpx;
+  padding: 12rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .commodity_attr_box .pop_bss {
+  width: 100%;
+}
+.container .commodity_attr_box .pop_bss .top_nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .commodity_attr_box .pop_bss .top_nav .quxiao {
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #323233;
+  line-height: 44rpx;
+}
+.container .commodity_attr_box .pop_bss .add_ren {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+}
+.container .commodity_attr_box .pop_bss .add_ren image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+.container .commodity_attr_box .pop_bss .add_ren .ren_s {
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #ffa230;
+}
+.container .commodity_attr_box .pop_bss .list_pops {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx 0 0;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 24rpx 28rpx 0rpx rgba(127, 73, 7, 0.01);
+  overflow-y: hidden;
+  height: 560rpx;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EBEDF0;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .imgage {
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .imgage image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .fei_bos {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .fei_bos .left_pop {
+  flex: 1;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .fei_bos .left_pop .name_pop {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .fei_bos .left_pop .idcard {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #323233;
+  line-height: 34rpx;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .fei_bos .ehange {
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .commodity_attr_box .pop_bss .list_pops .itme_pop .fei_bos .ehange image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.container .zan_dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.4);
+}
+.container .zan_dialog__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 999;
+  height: 600rpx;
+}
+.container .zan_dialog__container .d_popup {
+  margin-top: 100rpx;
+  padding: 24rpx 32rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8rpx;
+}
+.container .zan_dialog__container .d_popup .pup {
+  width: 100%;
+  font-size: 32rpx;
+  color: #323233;
+  text-align: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+.container .zan_dialog__container .d_popup .gong {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .zan_dialog__container .d_popup .sure {
+  width: 100%;
+  border-top: 1rpx solid #f2f2f2;
+  padding-top: 24rpx;
+  box-sizing: border-box;
+  text-align: center;
+  color: #3388FF;
+  font-size: 32rpx;
+  margin-top: 32rpx;
+}
+.container .zan_dialog_show .zan_dialog__container {
+  transform: translateY(0);
+}
+.container .zan_dialog_show .zan_dialog__mask {
+  display: block;
+}

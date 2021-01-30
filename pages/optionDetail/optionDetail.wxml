@@ -1,0 +1,86 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">票务详情</view>
+    </view>
+  </view>
+  <view class="health">
+    <concat />
+    <view class="downpo_bos">
+      <view class="top_piao">
+        <view class="op_piao">
+          <view class="one_ie">
+            <view class="one_anme">{{piaoData.departureHarbourName}}</view>
+            <view class="titme">{{piaoData.plannedDepartureTime}}</view>
+          </view>
+          <view class="tw_date">
+            <view class="top_nm">{{piaoData.run_time}}</view>
+            <view class="center_img">
+              <image src="{{imagesUrl}}/img_56.png" />
+            </view>
+            <view class="down_nm">{{piaoData.shipName}}</view>
+          </view>
+          <view class="one_right">
+            <view class="one_anme">{{piaoData.arrivalHarbourName}}</view>
+            <view class="titme">{{piaoData.plannedArrivalTime}}</view>
+          </view>
+        </view>
+        <view class="down_fne">
+          <view class="item_fne" bindtap="goContent" data-type="6">
+            <image src="../../static/img/img_98.png" />
+            <view class="fne_name">预定须知</view>
+          </view>
+          <view class="item_fne" bindtap="goContent1" data-type="7" data-tup="0">
+            <image src="../../static/img/img_98.png" />
+            <view class="fne_name">取票须知</view>
+          </view>
+          <view class="item_fne" bindtap="goContent" data-type="8">
+            <image src="../../static/img/img_97.png" />
+            <view class="fne_name">支出部分退</view>
+          </view>
+        </view>
+      </view>
+      <view class="list_piao">
+        <block wx:for="{{titleList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="tiem_piao" bindtap="gofillOrder" data-id="{{item.id}}" data-count="{{item.availableSeatCount}}">
+            <image src="{{item.image}}" />
+            <view class="rig_poa">
+              <view class="title_name">
+                <view class="tit_namm">{{item.cabinName}}</view>
+                <view class="pt">
+                  <view class="pt_icon">¥</view>
+                  <view class="pt_price">{{item.fullTicketPrice}}</view>
+                </view>
+              </view>
+              <view class="have">{{item.availableSeatCount >10?'有票' :'无票'}}</view>
+              <view class="change_gou">
+                <view class="gou_box  {{item.availableSeatCount >10?'' :'wan'}}">
+                  {{item.availableSeatCount >10?'选购' :'售完'}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- 登录弹窗 -->
+    <view class="opended" wx:if="{{openvar}}" bindtap="onClickOpen" catchtouchmove="consume"></view>
+    <view class="open_car" wx:if="{{openvar}}">
+      <view class="car_luie">
+        <view class="box_Logins">
+          <view class="box_login">提示</view>
+          <view class="login_content">您尚未登录，是否要授权登录</view>
+          <view class="butns">
+            <button class="login_false" bindtap="onClickOpen">取消</button>
+            <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="login_true">
+              <image src="../../static/img/img_101.png" />
+              <view class="img">确认</view>
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

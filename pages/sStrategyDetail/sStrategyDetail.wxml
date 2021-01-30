@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">攻略详情</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="detal">
+      <view class="details">
+        <view class="titles title_content">{{strategy.title}}</view>
+        <view class="dow">
+          <view class="dates">{{strategy.createtime}}</view>
+          <view class="w_imgs">
+            <image src="{{imagesUrl}}/img_38.png" />
+            <view class="n_num">{{strategy.view_num}}</view>
+          </view>
+        </view>
+        <view class="viedeos" wx:if="{{video !=''}}">
+          <video src="{{video}}" class="item_video"></video>
+        </view>
+        <view class="details_img">
+          <import src="../../wxParse/wxParse.wxml" />
+          <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+        </view>
+      </view>
+    </view>
+    <view class="tui">
+      <view class="tui_name">推荐购买</view>
+      <view class="tui_list">
+        <block wx:for="{{tuiList}}" wx:for-index="index" wx:key="index" wx:for-item="item">
+          <view class="list_item" bindtap="goToDeatils" data-goods_id="{{item.goods_id}}">
+            <image src="{{item.image}}" />
+            <view class="right_items">
+              <view class="test_ title_content">{{item.goods_name}}</view>
+              <view class="it_bx">
+                <!-- <block wx:for="{{four}}" wx:for-index="indexs" wx:key="indexs" wx:for-item="items" wx:if="{{indexs <3}}"> -->
+                <view class="bx_name">{{item.description}}</view>
+                <!-- </block> -->
+              </view>
+              <view class="xiao">
+                <text class="s_xiao_s">销量{{item.goods_sales}}件</text>
+              </view>
+              <view class="pt">
+                <view class="pt_icon">¥</view>
+                <view class="pt_price">{{item.goods_min_price}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

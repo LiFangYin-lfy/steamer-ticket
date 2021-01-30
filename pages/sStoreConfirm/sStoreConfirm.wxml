@@ -1,0 +1,119 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">订单结算</view>
+    </view>
+  </view>
+  <concat />
+  <!-- <form action="" bindsubmit="formOrder"> -->
+  <view class="health">
+    <view class="head_ox">
+      <!-- 详情进来得 -->
+      <block wx:if="{{is_buy== 0}}">
+        <block wx:for="{{detailList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+          <view class="wai_store">
+            <view class="stores">
+              <image src="{{item.image}}" />
+              <view class="rght_stores">
+                <view class="titles title_content2">{{item.goods_name}}</view>
+                <view class="ertong">{{item.goods_sku.goods_attr}}</view>
+                <view class="ertong">{{item.date}}</view>
+                <view class="dow_num">
+                  <view class="pt">
+                    <view class="pt_icon">¥</view>
+                    <view class="pt_price">{{item.goods_price}}</view>
+                  </view>
+                  <view class="num">x{{item.total_num}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="chuxing" wx:if="{{item.info_status != 0}}">
+              <view class="text_name">出行人信息</view>
+              <textarea name="" value="{{item.person_info}}" class="textareas" placeholder="请输入所有出行人的姓名+身份证号码，多出行人请分行填写（必填）" maxlength="300" data-index="{{index}}" bindinput="areatext" placeholder-class="textarea_placeholder"></textarea>
+            </view>
+          </view>
+        </block>
+      </block>
+      <!-- 购物车进来得 -->
+      <block wx:if="{{is_buy== 1}}">
+        <block wx:for="{{detailList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+          <view class="wai_store">
+            <view class="stores">
+              <image src="{{item.image}}" />
+              <view class="rght_stores">
+                <view class="titles title_content2">{{item.goods_name}}</view>
+                <view class="ertong">{{item.goods_sku.goods_attr}}</view>
+                <view class="ertong">{{item.date}}</view>
+                <view class="dow_num">
+                  <view class="pt">
+                    <view class="pt_icon">¥</view>
+                    <view class="pt_price">{{item.goods_price}}</view>
+                  </view>
+                  <view class="num">x{{item.total_num}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="chuxing" wx:if="{{item.info_status != 0}}">
+              <view class="text_name">出行人信息</view>
+              <textarea name="" class="textareas" bindinput="areatext" value="{{item.person_info}}" data-index="{{index}}" placeholder="请输入所有出行人的姓名+身份证号码，多出行人请分行填写（必填）" maxlength="300" placeholder-class="textarea_placeholder"></textarea>
+            </view>
+          </view>
+        </block>
+      </block>
+      <view class="wai_store_1">
+        <view class="total_price">
+          <view class="total_nam">商品总额</view>
+          <view class="total_nt">
+            <view class="pt">
+              <view class="pt_icon">¥</view>
+              <view class="pt_price">{{total_price}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="wai_store_2">
+        <view class="maijia">
+          <view class="mai_name">联系方式</view>
+          <view class="teas">
+            <textarea placeholder-class="textarea_placeholder" name="remark" bindinput="getTextarea" placeholder="请输入联系人姓名+手机号码（必填）"></textarea>
+          </view>
+        </view>
+      </view>
+      <view class="wai_store_3">
+        <view class="tongzhi">
+          <view class="zhi">
+            <image src="{{imagesUrl}}/img_32.png" />
+            <view class="zi_name">商家通知</view>
+          </view>
+        </view>
+        <view class="details_img">
+          <text class="met">{{notice}}</text>
+          <!-- <import src="../../wxParse/wxParse.wxml" />
+          <template is="wxParse" data="{{wxParseData:notice.nodes}}" /> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="opo">
+    <view class="  down_btn">
+      <view class="lft_btn">
+        <view class="total_he">合计</view>
+        <view class="pt">
+          <view class="pt_icon">¥</view>
+          <view class="pt_price">{{total_price}}</view>
+        </view>
+      </view>
+      <view class="tig_btn">
+        <button class="true_btn" disabled="{{is_true}}" catchtap="detailPay" wx:if="{{is_buy == 0}}">
+          确认订单
+        </button>
+        <button class="true_btn" disabled="{{is_true}}" catchtap="cartPay" wx:if="{{is_buy == 1}}">
+          确认订单
+        </button>
+      </view>
+    </view>
+  </view>
+  <!-- </form> -->
+</view>

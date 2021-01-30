@@ -1,0 +1,8 @@
+<view class="concat_box">
+  <view class="item_ai" catchtap="telPhone">
+    <image src="../../static/img/img_109.png" />
+  </view>
+  <button open-type="contact" class="item_ai" plain="true">
+    <image src="../../static/img/img_110.png" />
+  </button>
+</view>

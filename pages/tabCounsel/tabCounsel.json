@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "concat": "/Components/concat/concat"
+  },
+    "navigationStyle": "custom",
+  "navigationBarTextStyle": "white"
+}

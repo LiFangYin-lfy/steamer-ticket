@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">公告列表</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="list_box" wx:if="{{homeInfo.length !=0}}">
+      <block wx:for="{{homeInfo}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="box_item" bindtap="getResult" data-id="{{item.id}}">
+          <view class="title_biao title_content2">{{item.title}}</view>
+          <view class="douwn">
+            <view class="lft">
+              <image src="{{imagesUrl}}/img_5.png" />
+              <view class="data_ite">{{item.createtime}}</view>
+            </view>
+            <view class="loog">
+              <view class="loog_name">查看详情</view>
+              <image src="{{imagesUrl}}/img_28.png" />
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="cno" wx:else>
+      <view class="kongbox" wx:if="{{it_cloose== true}}">
+        <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+        <view class="c_name">暂无数据</view>
+      </view>
+    </view>
+  </view>
+</view>

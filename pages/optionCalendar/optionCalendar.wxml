@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="s_class" style='height:{{statusTop}}px; background:#fff'></view>
+  <view class="header">
+    <view class="left_img" catchtap="goback">
+      <image src="../../static/img/left_arrow.png" />
+      <!-- <view class="title_oage">选择日期</view> -->
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <van-calendar poppable="{{false}}" default-date="{{startDate}}" bindselect="clisk" style="--calendar-height: 100%;" min-date="{{minDate}}" max-date="{{maxDate}}" show-confirm="{{false}}" class="calendar" />
+  </view>
+</view>

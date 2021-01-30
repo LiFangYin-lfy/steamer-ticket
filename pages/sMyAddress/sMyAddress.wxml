@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">地址设置</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="address_list" wx:if="{{ressList.length !=0}}">
+      <block wx:for="{{ressList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="ess_lt">
+          <view class="lfet_n_p">
+            <view class="name_phone">
+              <view class="us_name">{{item.name}}</view>
+              <view class="us_phone">{{item.mobile}}</view>
+              <view class="moren" wx:if="{{item.default == 1}}">默认</view>
+            </view>
+            <view class="ress_name">{{item.area}}{{item.address}}</view>
+            <view class="set" wx:if="{{item.default == 1}}" data-default="{{item.default}}" data-id="{{item.id}}" bindtap="setMoTrue">
+              <image src="{{imagesUrl}}/img_42.png" />
+              <view class="set_true_name">取消默认</view>
+            </view>
+            <view class="set" wx:else bindtap="setMoTrue" data-default="{{item.default}}" data-id="{{item.id}}">
+              <image src="{{imagesUrl}}/img_43.png" />
+              <view class="set_true_name colore">设为默认</view>
+            </view>
+          </view>
+          <view class="right_btn">
+            <view class="ig" bindtap="getEditor" data-id="{{item.id}}">
+              <image src="{{imagesUrl}}/img_40.png" />
+              <view class="ig_name">编辑</view>
+            </view>
+            <view class="ig" bindtap="getDelete" data-id="{{item.id}}">
+              <image src="{{imagesUrl}}/img_41.png" />
+              <view class="ig_name">删除</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="cno" wx:else>
+      <view class="kongbox" wx:if="{{it_cloose== true}}">
+        <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+        <view class="c_name">暂无收货地址</view>
+      </view>
+    </view>
+  </view>
+  <view class="btnbuy">
+    <button class="btnbuy__" size="default" bindtap="goNewAddress">新建地址</button>
+  </view>
+</view>
+<view class="no-message" wx:if="{{nonono}}">
+  <image src="../../static/img/no.png" style="width:400rpx;height:400rpx "></image>
+</view>

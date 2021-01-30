@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">搜索</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="searchbox">
+      <view class="searchinput" bindtap="goSearch">
+        <image class="searchicon" src="{{imagesUrl}}/img_21.png" mode=""></image>
+        <input catchinput="navtosearch" catchconfirm="getInput" type="text" placeholder="搜索您想要的商品" placeholder-style="color:#C8C9CC;font-size:28rpx" value="{{title}}" />
+        <image src="{{imagesUrl}}/img_58.png" catchtap="delInput" class="del_img" />
+      </view>
+      <view class="pic_names" bindtap="searchInput">搜索</view>
+    </view>
+    <view class="history_search">
+      <view class="biao_ti" wx:if="{{historyList.length !=0}}">
+        <view class="his_nam">历史搜索</view>
+        <image src="{{imagesUrl}}/img_59.png" bindtap="delSearch" />
+      </view>
+      <view class="tory_list">
+        <block wx:for="{{historyList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="sear_name" bindtap="getHotRlt" data-title="{{item}}">{{item}}</view>
+        </block>
+      </view>
+      <view class="biao_ti" wx:if="{{hotList.length !=0}}">
+        <view class="his_nam">热门搜索</view>
+        <image src="{{imagesUrl}}/img_59.png" wx:if="{{four==0}}" />
+      </view>
+      <view class="tory_list">
+        <block wx:for="{{hotList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="ited_items" bindtap="getHotRlt" data-title="{{item.title}}">
+            <image src="{{item.image}}" />
+            <view class="sear_nade">{{item.title}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

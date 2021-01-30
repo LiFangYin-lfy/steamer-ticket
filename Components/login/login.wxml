@@ -1,0 +1,16 @@
+<view class="opended" wx:if="{{openvar}}" bindtap="onClickOpen"></view>
+<view class="open_car" wx:if="{{openvar}}">
+  <view class="car_luie">
+    <view class="box_Logins">
+      <view class="box_login">提示</view>
+      <view class="login_content">您尚未登录，是否要授权登录</view>
+      <view class="butns">
+        <button class="login_false" id="open" bindtap="onOpen">取消</button>
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="login_true">
+          <image src="{{imagesUrl}}/icon_c.png" />
+          <view class="img">确认</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

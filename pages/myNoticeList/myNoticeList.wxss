@@ -1,0 +1,104 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+}
+.container .health .list_box {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.container .health .list_box .box_item {
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+  margin-bottom: 20rpx;
+}
+.container .health .list_box .box_item .title_biao {
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #F1F2F4;
+}
+.container .health .list_box .box_item .douwn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28rpx;
+  box-sizing: border-box;
+}
+.container .health .list_box .box_item .douwn .lft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container .health .list_box .box_item .douwn .lft image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.container .health .list_box .box_item .douwn .lft .data_ite {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #969799;
+  line-height: 34rpx;
+}
+.container .health .list_box .box_item .douwn .loog {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container .health .list_box .box_item .douwn .loog image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 10rpx;
+}
+.container .health .list_box .box_item .douwn .loog .loog_name {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: right;
+  color: #969799;
+  line-height: 34rpx;
+}

@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">下单成功</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="succ_img">
+      <image src="{{imagesUrl}}/img_33.png" />
+      <view class="text_i">下单成功</view>
+    </view>
+    <view class="lis">
+      <view class="lt_order">
+        <view class="lbos">
+          <image src="{{imagesUrl}}/img_35.png" />
+          <view class="lb_names">订单编号</view>
+        </view>
+        <view class="right_or">{{order_no}}</view>
+      </view>
+      <view class="lt_order">
+        <view class="lbos">
+          <image src="{{imagesUrl}}/img_34.png" />
+          <view class="lb_names">下单时间</view>
+        </view>
+        <view class="right_or">{{datetime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="btns">
+    <view class="btnd">
+      <view class="pist" bindtap="goMyorder">查看订单</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,548 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+  padding-bottom: 150rpx;
+  box-sizing: border-box;
+}
+.container .health .ticket {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.container .health .ticket .items {
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .ticket .items .top_o {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .health .ticket .items .top_o .lft_ig {
+  display: flex;
+  align-items: center;
+}
+.container .health .ticket .items .top_o .lft_ig image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
+.container .health .ticket .items .top_o .lft_ig .store_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ff914c;
+}
+.container .health .ticket .items .top_o .order_status {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: right;
+  color: #ff5b13;
+}
+.container .health .ticket .items .top_otr {
+  width: 100%;
+  border-top: 2rpx solid #F1F2F4;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .ticket .items .top_otr .mudi {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .health .ticket .items .top_otr .mudi .start_go {
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+  line-height: 50rpx;
+}
+.container .health .ticket .items .top_otr .mudi .from_go {
+  color: #D8D8D8;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.container .health .ticket .items .top_otr .go_way {
+  width: 100%;
+}
+.container .health .ticket .items .top_otr .go_way .ong {
+  margin-right: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+.container .health .ticket .items .top_otr .go_way .ong image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+.container .health .ticket .items .top_otr .go_way .ong .ong_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .ticket .items .top_otr .go_way .ong:last-child {
+  margin-right: 0;
+}
+.container .health .ticket .items .top_otr .ong_tohe {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .health .ticket .items .top_otr .ong_tohe image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+.container .health .ticket .items .top_otr .ong_tohe .ong_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .ticket .items .top_otr .ong_tohe .ong_res {
+  color: #FF4115;
+}
+.container .health .ticket .items .top_otr .totals {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.container .health .ticket .items .top_otr .totals .zong {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .ticket .items .top_otr .totals .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .ticket .items .top_otr .totals .pt .pt_icon {
+  font-size: 22rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .ticket .items .top_otr .totals .pt .pt_price {
+  font-size: 28rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .ticket .tuikuan_list {
+  width: 100%;
+  padding: 0 24rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .ticket .tuikuan_list .tui_nae {
+  width: 100%;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 68rpx;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_item .t_name {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #323233;
+  font-weight: 600;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_item .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_item .pt .pt_icon {
+  font-size: 22rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_item .pt .pt_price {
+  font-size: 28rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 68rpx;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_date .date_name {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #323233;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tui_date .date_text {
+  flex: 1;
+  font-size: 28rpx;
+  color: #7d7e80;
+  line-height: 34rpx;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tuikuan {
+  width: 100%;
+  margin-top: 16rpx;
+  box-sizing: border-box;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tuikuan .bohui {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tuikuan .bohui .bo_name {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #323233;
+  font-weight: 600;
+}
+.container .health .ticket .tuikuan_list .tui_nae .tuikuan .bohui .text_name {
+  flex: 1;
+  font-size: 28rpx;
+  color: #7d7e80;
+  line-height: 34rpx;
+}
+.container .health .ticket .info {
+  width: 100%;
+  padding: 0 24rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .ticket .info .info_name {
+  width: 100%;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 600;
+  text-align: left;
+  color: #323233;
+  line-height: 44rpx;
+}
+.container .health .ticket .info .piao {
+  width: 100%;
+  display: flex;
+  border-top: 1rpx solid #F1F2F4;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .health .ticket .info .piao .getpiao {
+  display: flex;
+  align-items: center;
+  width: 200rpx;
+}
+.container .health .ticket .info .piao .getpiao .beihai {
+  font-size: 28rpx;
+  color: #323233;
+}
+.container .health .ticket .info .piao .getpiao .beihai_img {
+  width: 48rpx;
+  height: 48rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.container .health .ticket .info .piao .getpiao .beihai_img image {
+  width: 100%;
+  height: 20rpx;
+}
+.container .health .ticket .info .piao .inpduts {
+  flex: 1;
+}
+.container .health .ticket .info .piao .inpduts .title_ma {
+  width: 100%;
+  font-size: 24rpx;
+  color: #7d7e80;
+  line-height: 34rpx;
+}
+.container .health .ticket .downpo {
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .ticket .downpo .op_piao {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx dashed #D5D7D9;
+}
+.container .health .ticket .downpo .op_piao .one_ie .one_anme {
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .ticket .downpo .op_piao .one_ie .titme {
+  font-size: 48rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 600;
+  text-align: left;
+  color: #323233;
+  line-height: 66rpx;
+}
+.container .health .ticket .downpo .op_piao .tw_date .top_nm {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #5e5e60;
+  line-height: 40rpx;
+  letter-spacing: 1rpx;
+}
+.container .health .ticket .downpo .op_piao .tw_date .center_img {
+  width: 144rpx;
+  height: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .health .ticket .downpo .op_piao .tw_date .center_img image {
+  width: 100%;
+  height: 20rpx;
+}
+.container .health .ticket .downpo .op_piao .tw_date .down_nm {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #5e5e60;
+  line-height: 40rpx;
+  letter-spacing: 1rpx;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+.container .health .ticket .downpo .op_piao .one_right .one_anme {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: right;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .ticket .downpo .op_piao .one_right .titme {
+  font-size: 48rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 600;
+  text-align: right;
+  color: #323233;
+  line-height: 66rpx;
+}
+.container .health .ticket .per_box {
+  width: 100%;
+}
+.container .health .ticket .per_box .per_info {
+  width: 100%;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.container .health .ticket .per_box .per_info .per_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #323233;
+  line-height: 40rpx;
+  width: 100%;
+}
+.container .health .ticket .per_box .per_info .total_pri {
+  width: 100%;
+  padding: 7rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.container .health .ticket .per_box .per_info .total_pri .prr_name {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #7d7e80;
+  line-height: 34rpx;
+  letter-spacing: 1rpx;
+  width: 150rpx;
+}
+.container .health .ticket .per_box .per_info .total_pri .test {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 34rpx;
+  letter-spacing: 1rpx;
+}
+.container .health .ticket .per_box .per_info .total_pri .bos_pto {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container .health .ticket .per_box .per_info .total_pri .bos_pto .prr_name {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #7d7e80;
+  line-height: 34rpx;
+  letter-spacing: 1rpx;
+  width: 150rpx;
+}
+.container .health .ticket .per_box .per_info .total_pri .bos_pto .test {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 34rpx;
+  letter-spacing: 1rpx;
+}
+.container .health .ticket .per_box .per_info .total_pri image {
+  width: 32rpx;
+  height: 32rpx;
+  text-align: right;
+}
+.container .health .ticket .per_box .per_info:last-child {
+  border: 0 none;
+}
+.container .health .ticket .order_num {
+  width: 100%;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .ticket .order_num .sdg {
+  width: 100%;
+}
+.container .health .ticket .order_num .sdg .ticketNotice image {
+  max-width: 100% !important;
+}
+.container .health .ticket .order_num .sdg .prr_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .ticket .order_num .sdg .test_pry {
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+  letter-spacing: 1rpx;
+}
+.container .health .ticket .order_num .sd_g {
+  display: flex;
+  align-items: center;
+}
+.container .bny_btn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+.container .bny_btn .bit_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .bny_btn .bit_btn .bt_emp {
+  width: 200rpx;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #FFA230;
+  border: 1rpx solid #ffa230;
+}
+.container .bny_btn .bit_btn .bt_bg {
+  width: 200rpx;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #FFA230;
+}
+.container .bny_btn .bit_btn .btnmargin {
+  margin-left: 20rpx;
+}

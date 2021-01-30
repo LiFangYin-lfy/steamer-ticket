@@ -1,0 +1,189 @@
+page {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+
+  .header {
+    width: 100%;
+    background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+
+
+    .left_img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 32rpx;
+      box-sizing: border-box;
+      height: 88rpx;
+
+      image {
+        width: 32rpx;
+        height: 32rpx;
+      }
+
+      .title_oage {
+        flex: 1;
+        margin-right: 32rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 500;
+
+      }
+    }
+  }
+
+  .health {
+    width: 100%;
+
+    .searchbox {
+      height: 108rpx;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 32rpx;
+      box-sizing: border-box;
+      background-color: #fff;
+
+      .pic_names {
+        width: 68rpx;
+        height: 68rpx;
+        margin-left: 32rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .searchinput {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        height: 68rpx;
+        background: #f7f8fa;
+        border-radius: 4rpx;
+        padding-left: 32rpx;
+        box-sizing: border-box;
+        position: relative;
+
+        .searchicon {
+          width: 28rpx;
+          height: 28rpx;
+          margin-right: 12rpx;
+        }
+
+        input {
+          font-size: 28rpx;
+        }
+
+        .del_img {
+          width: 32rpx;
+          height: 32rpx;
+          position: absolute;
+          top: 20rpx;
+          right: 20rpx;
+          z-index: 3;
+        }
+
+      }
+
+    }
+
+    .history_search {
+      width: 100%;
+      padding: 32rpx;
+      box-sizing: border-box;
+
+
+      .biao_ti {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20rpx 0;
+        box-sizing: border-box;
+
+
+        .his_nam {
+          font-size: 28rpx;
+          font-family: PingFangSC,
+            PingFangSC-Regular;
+          font-weight: 400;
+          text-align: left;
+          color: #7d7e80;
+          line-height: 40rpx;
+        }
+
+        image {
+          width: 40rpx;
+          height: 40rpx;
+
+        }
+      }
+
+      .tory_list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .sear_name {
+          padding: 10rpx 20rpx;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 26rpx;
+          font-family: PingFangSC,
+            PingFangSC-Regular;
+          font-weight: 400;
+          color: #323233;
+          background: #f7f8fa;
+          border-radius: 8rpx;
+          margin-right: 20rpx;
+          margin-bottom: 20rpx;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        .ited_items {
+          display: flex;
+          align-items: center;
+          padding: 10rpx 20rpx;
+          box-sizing: border-box;
+          justify-content: center;
+          border-radius: 8rpx;
+          margin-right: 20rpx;
+          margin-bottom: 20rpx;
+          background: #f7f8fa;
+
+
+          image {
+            width: 32rpx;
+            height: 32rpx;
+            margin-right: 10rpx;
+          }
+
+          .sear_nade {
+            font-size: 26rpx;
+            font-family: PingFangSC,
+              PingFangSC-Regular;
+            font-weight: 400;
+            color: #323233;
+            background: #f7f8fa;
+          }
+
+
+        }
+      }
+    }
+  }
+
+}

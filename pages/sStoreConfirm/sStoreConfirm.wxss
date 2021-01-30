@@ -1,0 +1,343 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(to right, #ffb94c, #ff893e);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+  padding-bottom: 150rpx;
+}
+.container .health .head_ox {
+  width: 100%;
+}
+.container .health .head_ox .wai_store {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1rpx solid #F3F4F6;
+}
+.container .health .head_ox .wai_store .stores {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .health .head_ox .wai_store .stores image {
+  width: 216rpx;
+  height: 216rpx;
+  border-radius: 8rpx;
+}
+.container .health .head_ox .wai_store .stores .rght_stores {
+  flex: 1;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 216rpx;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .titles {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 44rpx;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .ertong {
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .pt .pt_icon {
+  font-size: 24rpx;
+  color: #FF4115;
+  font-weight: 500;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .pt .pt_price {
+  font-size: 34rpx;
+  color: #FF4115;
+  font-weight: 500;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .dow_num {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .dow_num .num {
+  font-size: 28rpx;
+  color: #7d7e80;
+  text-align: right;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .dow_num .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .dow_num .pt .pt_icon {
+  font-size: 24rpx;
+  color: #FF4115;
+  font-weight: 500;
+}
+.container .health .head_ox .wai_store .stores .rght_stores .dow_num .pt .pt_price {
+  font-size: 34rpx;
+  color: #FF4115;
+  font-weight: 500;
+}
+.container .health .head_ox .wai_store .name_idcard {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .health .head_ox .wai_store .name_idcard .names_nm {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+}
+.container .health .head_ox .wai_store .name_idcard .names_nm .nickme {
+  width: 200rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+}
+.container .health .head_ox .wai_store .name_idcard .names_nm .input {
+  flex: 1;
+}
+.container .health .head_ox .wai_store .name_idcard .names_nm .input .ipt {
+  width: 100%;
+  height: 88rpx;
+}
+.container .health .head_ox .wai_store .chuxing {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .health .head_ox .wai_store .chuxing .text_name {
+  width: 100%;
+  font-size: 32rpx;
+  color: #323233;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.container .health .head_ox .wai_store .chuxing .textareas {
+  width: 100%;
+  min-height: 40rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .head_ox .wai_store .chuxing .textarea_placeholder {
+  color: #7d7e80;
+  font-size: 22rpx;
+}
+.container .health .head_ox .wai_store_1 {
+  width: 100%;
+  background-color: #fff;
+}
+.container .health .head_ox .wai_store_1 .total_price {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.container .health .head_ox .wai_store_1 .total_price .total_nam {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .head_ox .wai_store_1 .total_price .pt {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+.container .health .head_ox .wai_store_1 .total_price .pt .pt_icon {
+  font-size: 18rpx;
+  color: #323233;
+  font-weight: 500;
+}
+.container .health .head_ox .wai_store_1 .total_price .pt .pt_price {
+  font-size: 24rpx;
+  color: #323233;
+  font-weight: 500;
+}
+.container .health .head_ox .wai_store_2 {
+  width: 100%;
+  background-color: #fff;
+}
+.container .health .head_ox .wai_store_2 .maijia {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .health .head_ox .wai_store_2 .maijia .mai_name {
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 80rpx;
+}
+.container .health .head_ox .wai_store_2 .maijia .teas {
+  width: 100%;
+  height: 200rpx;
+}
+.container .health .head_ox .wai_store_2 .maijia .teas textarea {
+  width: 100%;
+  height: 200rpx;
+  padding: 10rpx 0 0 0;
+  box-sizing: border-box;
+}
+.container .health .head_ox .wai_store_3 {
+  width: 100%;
+  background-color: #fff;
+}
+.container .health .head_ox .wai_store_3 .tongzhi {
+  width: 100%;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.container .health .head_ox .wai_store_3 .tongzhi .zhi {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+.container .health .head_ox .wai_store_3 .tongzhi .zhi image {
+  width: 34rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+.container .health .head_ox .wai_store_3 .tongzhi .zhi .zi_name {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .head_ox .wai_store_3 .details_img {
+  width: 100%;
+  padding: 0 10rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .health .head_ox .wai_store_3 .details_img .met {
+  font-weight: 400;
+  color: #999999;
+  font-size: 24rpx;
+}
+.container .opo {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+.container .opo .down_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .opo .down_btn .lft_btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container .opo .down_btn .lft_btn .total_he {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+  line-height: 34rpx;
+  margin-right: 20rpx;
+}
+.container .opo .down_btn .lft_btn .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .opo .down_btn .lft_btn .pt .pt_icon {
+  font-size: 24rpx;
+  color: #FF4115;
+  font-weight: 500;
+}
+.container .opo .down_btn .lft_btn .pt .pt_price {
+  font-size: 34rpx;
+  color: #FF4115;
+  font-weight: 500;
+}
+.container .opo .down_btn .tig_btn {
+  width: 240rpx;
+  height: 80rpx;
+}
+.container .opo .down_btn .tig_btn .true_btn {
+  height: 80rpx;
+  background: #ffa230;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.container .opo .down_btn .tig_btn button {
+  margin: 0;
+  padding: 0;
+}
+.container .opo .down_btn .tig_btn button::after {
+  border: 0 none;
+}

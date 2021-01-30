@@ -1,0 +1,165 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">{{qiang==0?'填写订单' : '抢票'}}</view>
+    </view>
+    <concat />
+    <view class="tip_bbt">
+      <view class="tio_a">
+        <image src="{{imagesUrl}}/img_71.png" />
+        <view class="tia_a " wx:if="{{qiang==0}}">
+          {{fill_line.plannedDepartureDate}} {{fill_line.week}}
+          <text class="tia_a">{{departureHarbourName}}-{{arrivalHarbourName}}</text>
+          {{fill_line.plannedDepartureTime}}
+        </view>
+        <view class="tia_a " wx:if="{{qiang==1}}">
+          {{ary_obj.date}} {{'周'+ week}}  {{ary_obj.start}}-{{ary_obj.end}} {{ary_obj.rob_time}}
+        </view>
+      </view>
+      <view class="tio_b">
+        <!-- <view class="tia_b" wx:if="{{qiang==0}}">{{fillOrder.cabinName}}</view>
+        <view class="tia_b" wx:if="{{qiang==1}}">{{ticket_name}}</view> -->
+        <!-- <view class="tia_c">
+          <view class="admin">
+            <view class="pt">
+              <view class="pt_icon">¥</view>
+              <view class="pt_price">{{ticket_price}}</view>
+            </view>
+            <view class="per">/成人</view>
+          </view>
+          <view class="admin">
+            <view class="pt">
+              <view class="pt_icon">¥</view>
+              <view class="pt_price">{{half_price}}</view>
+            </view>
+            <view class="per">/儿童</view>
+          </view>
+          <view class="admin">
+            <view class="pt"></view>
+            <view class="per">免费/携童</view>
+          </view>
+        </view> -->
+        <view class="tia_d">
+          年龄超过6周岁但是不超过14周岁或身高超过1.2米（含1.2米）但不超过1.5米（含1.5米）的未成年人，应购买儿童票，并且和成人一起下单
+        </view>
+      </view>
+      <view class="tio_c">
+        <image src="{{imagesUrl}}/img_72.png" />
+        <view class="tia_d">如有疑问请联系在线客服，或电话:{{mobile}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="health">
+    <view class="tan_pop">
+      <view class="pop_ox">
+        <view class="ke_names">乘船乘客</view>
+        <view class="add_ke" bindtap="clickOpen">
+          <image src="{{imagesUrl}}/img_74.png" />
+          <view class="add_name">添加乘客</view>
+        </view>
+        <view class="ke_list">
+          <view class="lis_le">
+            <block wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+              <view class="ke_item" catchtap="clickOpen" wx:if="{{item.it_cloose == true}}">
+                {{item.name}}
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="phone">
+          <view class="ph_b">
+            <view class="ph_name">手机号码</view>
+            <view class="i_name">*</view>
+          </view>
+          <view class="ins">
+            <input type="number" class="phone_input" maxlength="11" bindinput="phoneInput" placeholder="用户接收取票信息" placeholder-class="input_placeholder" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="order_tongzhi">
+      <view class="order_s" bindtap="goOrderRule">
+        <view class="tong">
+          <image src="{{imagesUrl}}/img_75.png" />
+          <view class="tong_nan">预定须知</view>
+        </view>
+        <image src="{{imagesUrl}}/img_28.png" class="arrow" />
+      </view>
+    </view>
+    <view class="tongys" bindtap="changeTrue">
+      <view class="chan">
+        <image src="{{imagesUrl}}/img_37.png" wx:if="{{look_true}}" />
+        <image src="{{imagesUrl}}/img_73.png" wx:else />
+      </view>
+      <view class="lode">
+        <view class="gou">
+          勾选表示已阅读并同意
+          <text class="gou_xuan">购取票/退订须知、船票代订服务协议</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="down_btns">
+    <view class="downs">
+      <view class="lis">
+        <view class="lis_name">订单总额:</view>
+        <view class="pt">
+          <view class="pt_icon">¥</view>
+          <view class="pt_price">{{total_price}}</view>
+        </view>
+      </view>
+      <view class="butto">
+        <view class="bt" wx:if="{{qiang == 0}}" bindtap="payoff">确认订单</view>
+        <view class="bt" wx:if="{{qiang == 1}}" bindtap="qiangoff">抢票</view>
+      </view>
+    </view>
+  </view>
+  <!-- 屏幕背景变暗的背景 -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="pop_bss">
+      <view class="top_nav">
+        <view class="quxiao" bindtap="hideModal">取消</view>
+        <view class="quxiao" style="font-weight :600" bindtap="setTrue">确定</view>
+      </view>
+      <view class="add_ren" bindtap="TofillAddOrder">
+        <image src="{{imagesUrl}}/img_74.png" />
+        <view class="ren_s">新增乘船人</view>
+      </view>
+      <view class="list_pops">
+        <scroll-view scroll-y='true' style='height:100%'>
+          <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <view class="itme_pop">
+              <view class="imgage" catchtap="getEditor" data-id="{{item.id}}">
+                <image src="{{imagesUrl}}/img_76.png" />
+              </view>
+              <view class="fei_bos" catchtap="changedPer" data-index="{{index}}">
+                <view class="left_pop">
+                  <view class="name_pop">{{item.name}}</view>
+                  <view class="idcard">{{item.type}} {{item.number}}</view>
+                </view>
+                <view class="ehange">
+                  <image src="{{imagesUrl}}/img_91.png" wx:if="{{item.it_cloose}}" />
+                  <image src="{{imagesUrl}}/img_73.png" wx:else />
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class="zan_dialog {{ showDialog ? 'zan_dialog_show' : '' }}" wx:if="{{showDialog}}">
+    <view class="zan_dialog__mask" bindtap="toggleDialog" />
+    <view class="zan_dialog__container">
+      <view class="d_popup">
+        <view class="pup">预定提示</view>
+        <view class="gong">{{listError}}</view>
+        <view class="sure" wx:if="{{qiang == 0}}" bindtap="toggleDialog2">我知道了</view>
+        <view class="sure" wx:if="{{qiang == 1}}" bindtap="toggleDialog3">我知道了</view>
+      </view>
+    </view>
+  </view>
+</view>

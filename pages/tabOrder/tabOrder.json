@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "concat": "/Components/concat/concat"
+  }
+}

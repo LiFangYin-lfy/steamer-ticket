@@ -1,0 +1,126 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">抢票</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="change">
+      <view class="change_time">
+        <view class="time_name">选择时段</view>
+        <view class="time_bod">
+          <block wx:for="{{rob_time}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="tm_item" bindtap="changedRob" data-index="{{index}}">
+              <view class="imgs">
+                <image src="{{imagesUrl}}/img_42.png" wx:if="{{item.is_true}}" />
+                <image src="{{imagesUrl}}/img_43.png" wx:else />
+              </view>
+              <view class="tm_names  {{item.is_true == true ? 'is_true' : ''}}">{{item.time}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="change_time">
+        <view class="time_name" style="width :160rpx">购买加速球 （10元/个）</view>
+        <view class="time_bod">
+          <block wx:for="{{rob_ball}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="tm_item tm_width" bindtap="changedBall" data-index="{{index}}">
+              <view class="imgs">
+                <image src="{{imagesUrl}}/img_42.png" wx:if="{{item.is_true}}" />
+                <image src="{{imagesUrl}}/img_43.png" wx:else />
+              </view>
+              <view class="tm_names  {{item.is_true == true ? 'is_true' : ''}} ">
+                {{item.text}}
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="change_time">
+        <view class="time_name" style="width :158rpx">选择仓位</view>
+        <view class="time_bod">
+          <block wx:for="{{line_rob_cabin}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="tgm_box" bindtap="changedCabin" data-index="{{index}}">
+              <image class="imges" src="{{item.image}}" />
+              <view class="dowm_po  {{item.is_true == true ? 'is_back' : ''}}">
+                <view class="po_name">{{item.name}}</view>
+              </view>
+            </view>
+          </block>
+          <view class="down_ti">
+            <view class="ti_name" wx:if="{{is_true == 0}}">提示：推荐选择【特等舱及以下】，增加抢票成功几率</view>
+            <view class="ti_name" wx:else>{{tip_item}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="change_time">
+        <view class="time_name" style="width :160rpx">截止时间</view>
+        <view class="time_bod">
+          <block wx:for="{{rob_end_time}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="tm_item tm_width" bindtap="changedTime" data-index="{{index}}">
+              <view class="imgs">
+                <image src="{{imagesUrl}}/img_42.png" wx:if="{{item.is_true}}" />
+                <image src="{{imagesUrl}}/img_43.png" wx:else />
+              </view>
+              <view class="tm_names  {{item.is_true == true ? 'is_true' : ''}}">{{item.text}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="gou_bod">
+      <view class="goumai">
+        <view class="gou_rule">
+          <image src="{{imagesUrl}}/img_48.png" />
+          <view class="rule_name">购买须知</view>
+        </view>
+        <view class="dos_list">
+          <view class="details_img">
+            <import src="../../wxParse/wxParse.wxml" />
+            <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+          </view>
+        </view>
+      </view>
+      <view class="goumai">
+        <view class="gou_rule">
+          <image src="{{imagesUrl}}/img_91.png" />
+          <view class="rule_name">我的选择</view>
+        </view>
+        <view class="info_box">
+          <view class="info_list">
+            <view class="left_info">出行日期</view>
+            <view class="ri_t">{{date}}</view>
+          </view>
+          <view class="info_list">
+            <view class="left_info">抢票时段</view>
+            <view class="ri_t">{{rob_time_id}}</view>
+          </view>
+          <view class="info_list">
+            <view class="left_info">购买加速球</view>
+            <view class="ri_t">{{rob_ball_name}}</view>
+          </view>
+          <view class="info_list">
+            <view class="left_info">抢票仓位</view>
+            <view class="ri_t">{{ticket_name}}</view>
+          </view>
+          <view class="info_list">
+            <view class="left_info">截止时间</view>
+            <view class="ri_t">{{rob_end_time_id}}</view>
+          </view>
+          <!-- <view class="info_list">
+            <view class="left_info">方案成功率</view>
+            <view class="ri_t" style="color:  #FF4115">{{ticket_ratio}}%</view>
+          </view> -->
+        </view>
+      </view>
+    </view>
+    <view class="btns">
+      <view class="btnd" bindtap="goNext">
+        <view class="pist">同意抢票规则，下一步</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,180 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">选择日期</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="change_date">
+      <view class="vage_date " bindtap="vageClick" data-vad="0">
+        <view class="vage_items  {{vad== 0?'vage_color' : ''}}">
+          <view class="vage_name">北海</view>
+          <view class="vage_img">
+            <image src="../../static/img/img_112.png" wx:if="{{vad == 0}}" />
+            <image src="../../static/img/img_113.png" wx:else />
+          </view>
+          <view class="vage_name">涠洲</view>
+        </view>
+      </view>
+      <view class="vage_date" bindtap="vageClick" data-vad="1">
+        <view class="vage_items {{vad== 1 ?'vage_color' : ''}}">
+          <view class="vage_name">涠洲</view>
+          <view class="vage_img">
+            <image src="../../static/img/img_112.png" wx:if="{{vad == 1}}" />
+            <image src="../../static/img/img_113.png" wx:else />
+          </view>
+          <view class="vage_name">北海</view>
+        </view>
+      </view>
+    </view>
+    <view class="top_date">
+      <view class="date_numebe">
+        <block wx:for="{{dataArr}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="date_item {{is_selected==index?'active' :''}}" catchtap="changeDate" data-index="{{index}}">
+            <view class="center_box">
+              <view class="now">{{item.week}}</view>
+              <view class="dates">{{item.date}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="all_date" catchtap="goOptionCalendar">
+        <view class="all_test">全部日期</view>
+        <view class="imgs">
+          <image src="{{imagesUrl}}/img_9.png" />
+        </view>
+      </view>
+    </view>
+    <view class="piaolist" wx:if="{{no_sale}}">
+      <!-- 已开售 -->
+      <block wx:if="{{ticket_box.length !=0}}">
+        <block wx:for="{{ticket_box}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="list_piao" bindtap="ticketDetail" data-id="{{item.id}}">
+            <view class="ip_it">
+              <view class="lft_t">
+                <view class="form_ess">{{item.plannedDepartureTime}}</view>
+                <view class="form_name">{{item.departureHarbourName}}</view>
+              </view>
+              <view class="ctr_t">
+                <view class="ctr_nam">
+                  <image src="{{imagesUrl}}/img_10.png" />
+                  <view class="ctr_t_name">{{item.run_time}}</view>
+                </view>
+                <view class="center_ctr">
+                  <view class="em_pty"></view>
+                  <view class="dashed_"></view>
+                  <view class="shi_pty"></view>
+                </view>
+                <view class="douwm_name">{{item.shipName}}</view>
+              </view>
+              <view class="to_to">
+                <view class="to_ess">{{item.plannedArrivalTime}}</view>
+                <view class="to_name">{{item.arrivalHarbourName}}</view>
+              </view>
+            </view>
+            <view class="rig_it">
+              <view class="pt" wx:if="{{item.count == 1}}">
+                <view class="pt_icon">¥</view>
+                <view class="pt_price">{{item.min_price}}起</view>
+              </view>
+              <view class="tig_name" wx:if="{{item.count == 0}}">售空</view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <block wx:else>
+        <view class="list_piao  active_piao" bindtap="goRobTickets" wx:if="{{is_no_ticket== 0}}">
+          <view class="dates">该日期航班已售完，点击进行抢票</view>
+          <view class="bosx_piaoo">
+            <view class="ip_it">
+              <view class="lft_t">
+                <view class="form_name">{{op_obj.start_name}}</view>
+              </view>
+              <view class="ctr_t">
+                <view class="ctr_nam"></view>
+                <view class="center_ctr">
+                  <view class="em_pty"></view>
+                  <view class="dashed_"></view>
+                  <view class="shi_pty"></view>
+                </view>
+              </view>
+              <view class="to_to">
+                <view class="to_name">{{op_obj.end_name}}</view>
+              </view>
+            </view>
+            <view class="rig_it">
+              <view class="qiang">抢票</view>
+            </view>
+          </view>
+        </view>
+        <view class="no_ticket" wx:if="{{is_no_ticket == 1 }}">
+          <view class="yi_out">
+            <view class="img_wu">
+              <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+              <view class="text_no">温馨提示： 抱歉，该时段的航班已售完</view>
+              <view class="next_day" bindtap="lookedNext">查看下一天航班</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="else" wx:else>
+      <!-- 未开售 -->
+      <view class="no_sales">
+        <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+        <view class="text_no">温馨提示： 抱歉，该时段的航班还未开售</view>
+        <view class="next_day" bindtap="clickSubscribe">点击链接预约未开售航班</view>
+      </view>
+    </view>
+    <view class="tui">
+      <view class="pos_i">
+        <view class="tui_name">推荐购买</view>
+      </view>
+      <view class="list_tui">
+        <block wx:for="{{tuiList}}" wx:for-index="index" wx:key="index" wx:for-item="item">
+          <view class="list_item" bindtap="goToDeatils" data-goods_id="{{item.goods_id}}">
+            <image src="{{item.image}}" />
+            <view class="right_items">
+              <view class="test_ title_content">{{item.goods_name}}</view>
+              <view class="it_bx">
+                <!-- <block wx:for="{{four}}" wx:for-index="indexs" wx:key="indexs" wx:for-item="items" wx:if="{{indexs <3}}"> -->
+                <view class="bx_name">{{item.description}}</view>
+                <!-- </block> -->
+              </view>
+              <view class="xiao">
+                <text class="s_xiao_s">销量{{item.goods_sales}}件</text>
+              </view>
+              <view class="pt">
+                <view class="pt_icon">¥</view>
+                <view class="pt_price">{{item.goods_min_price}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="down_items">
+      <view class="items_ox">
+        <view class="ox_item" bindtap="gonavHome">
+          <image src="{{imagesUrl}}/img_8.png" />
+          <view class="ox_name">返回首页</view>
+        </view>
+        <view class="ox_item" bindtap="telPhone">
+          <image src="{{imagesUrl}}/img_6.png" />
+          <view class="ox_name">电话咨询</view>
+        </view>
+        <button class="ox_item" open-type="contact">
+          <image src="{{imagesUrl}}/img_5.png" />
+          <view class="ox_name">在线预约</view>
+        </button>
+        <view class="ox_item" bindtap="goclickmap">
+          <image src="{{imagesUrl}}/img_4.png" />
+          <view class="ox_name">港口地图</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

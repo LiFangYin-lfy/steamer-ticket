@@ -1,0 +1,204 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">我的订单</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="nav_title">
+      <view class="nav_bot">
+        <view class="box_nav {{is_nav == 0 ? 'nav_cllass' : ''}}" bindtap="changeOrder" data-is_nav="0">
+          <view class="nav_name">船票</view>
+        </view>
+        <view class="box_nav  {{is_nav == 1 ? 'nav_cllass2' : ''}}" bindtap="changeOrder" data-is_nav="1">
+          <view class="nav_name">商品</view>
+        </view>
+      </view>
+    </view>
+    <view class="tuan_order">
+      <view class="bottom_scroll">
+        <view class="nav  " wx:for="{{navList}}" wx:key="index" bindtap='switchTap' data-index="{{index}}">
+          <view class="nav_tab  {{esl == index?'active':''}} ">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="lists">
+      <view class="bor_one">
+        <!-- 商城 -->
+        <block wx:if="{{is_nav== 1}}">
+          <block wx:if="{{orderList.length !=0}}">
+            <block wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+              <view class="items" catchtap="goOrderDetail" data-id="{{item.id}}">
+                <view class="top_o">
+                  <view class="lft_ig">
+                    <image src="{{imagesUrl}}/img_50.png" />
+                    <view class="store_name">商品订单</view>
+                  </view>
+                  <view class="order_status">{{item.status_text}}</view>
+                </view>
+                <block wx:for="{{item.goods}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
+                  <view class="top_co">
+                    <image src="{{item1.image}}" />
+                    <view class="top_right">
+                      <view class="titles title_content2">{{item1.goods_name}}</view>
+                      <view class="piao">
+                        <view class="piao_date">{{item1.goods_attr}} {{item1.date}}</view>
+                        <!-- <van-count-down time="{{ item.time }}" class="piao_time" /> -->
+                      </view>
+                      <view class="pr_num">
+                        <view class="pt">
+                          <view class="pt_icon">¥</view>
+                          <view class="pt_price">{{item1.total_price}}</view>
+                        </view>
+                        <view class="nunbs">
+                          <view class="bs_icon">x</view>
+                          <view class="bs_price">{{item1.total_num}}</view>
+                        </view>
+                      </view>
+                      <!-- <view class="totals">
+                        <view class="zong">{{item.status_text == '待支付'?'应付款：':'已付款：'}}</view>
+                        <view class="pt">
+                          <view class="pt_icon">¥</view>
+                          <view class="pt_price">{{item1.total_price}}</view>
+                        </view>
+                      </view> -->
+                    </view>
+                  </view>
+                  <view class="totals">
+                    <view class="d_box">
+                      <view class="zhifu" wx:if="{{item.status_text =='待支付'}}">
+                        <view class="txt_name">剩余支付时间</view>
+                        <van-count-down time="{{ item.time }}" style="color: #7d7e80;" class="piao_time" />
+                      </view>
+                    </view>
+                    <view class="bosx">
+                      <view class="zong">{{item.status_text == '待支付'?'应付款：':'已付款：'}}</view>
+                      <view class="pt">
+                        <view class="pt_icon">¥</view>
+                        <view class="pt_price">{{item1.total_price}}</view>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+                <view class="bit_btn">
+                  <button class="bt_emp btnmargin" disabled="{{is_true}}" wx:if="{{item.status_text == '待支付'}}" data-id="{{item.id}}" catchtap="clickCancel">
+                    取消订单
+                  </button>
+                  <button class="bt_bg btnmargin" disabled="{{is_true}}" wx:if="{{item.status_text == '待支付'}}" data-id="{{item.id}}" catchtap="clickPay">
+                    付款
+                  </button>
+                  <button class="bt_emp btnmargin" disabled="{{is_true}}" wx:if="{{item.status_text == '待发货' }}" data-id="{{item.id}}" catchtap="clickEvidence">
+                    查看凭证
+                  </button>
+                  <button class="bt_bg btnmargin" disabled="{{is_true}}" wx:if="{{item.status_text == '待收货'}}" data-id="{{item.id}}" catchtap="clickReceipt">
+                    确认收货
+                  </button>
+                  <button class="bt_emp btnmargin" disabled="{{is_true}}" wx:if="{{item.status_text != '待支付'  &&    item.refund_price > 0}}" data-id="{{item.id}}" data-pay="{{item.refund_price}}" catchtap="clickRefund">
+                    申请退款
+                  </button>
+                  <button class="bt_bg btnmargin" disabled="{{is_true}}" wx:if="{{item.status_text == '待评价'}}" data-id="{{item.id}}" catchtap="goTabCounsel">
+                    评价
+                  </button>
+                </view>
+              </view>
+            </block>
+            <view class="nomore_list" wx:if="{{is_more}}">没有更多数据了哦~~~</view>
+          </block>
+          <view class="cno" wx:else>
+            <view class="kongbox" wx:if="{{it_cloose== true}}">
+              <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+              <view class="c_name">暂无数据</view>
+            </view>
+          </view>
+        </block>
+        <!-- 船票 -->
+        <block wx:else>
+          <block wx:if="{{orderList.length !=0}}">
+            <block wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+              <view class="items" catchtap="gomyTicket" data-id="{{item.id}}">
+                <view class="top_o">
+                  <view class="lft_ig">
+                    <image src="{{imagesUrl}}/img_51.png" />
+                    <view class="store_name">船票订单</view>
+                  </view>
+                  <view class="order_status">{{item.status_text}}</view>
+                </view>
+                <view class="top_otr">
+                  <view class="mudi">
+                    <view class="start_go">{{item.start}}</view>
+                    <view class="from_go">——</view>
+                    <view class="end_to  start_go">{{item.end}}</view>
+                  </view>
+                  <view class="go_way">
+                    <view class="ong">
+                      <image src="{{imagesUrl}}/img_53.png" />
+                      <view class="ong_name">
+                        {{item.line.shipName}} {{item.line_cabin.cabinName}}
+                      </view>
+                    </view>
+                    <view class="ong">
+                      <image src="{{imagesUrl}}/img_54.png" />
+                      <view class="ong_name  piao">
+                        <view class="piao">
+                          <view class="piao_date">{{item.date}}</view>
+                          <view class="piao_date" style="margin-left:20rpx">
+                            {{item.start_time}}
+                          </view>
+                        </view>
+                        启程
+                      </view>
+                    </view>
+                  </view>
+                  <view class="ticket_rule" catchtap="lookedRule">
+                    <view class="left_rule">
+                      <image src="{{imagesUrl}}/img_49.png" />
+                      <view class="rule_names">船票退改规则</view>
+                    </view>
+                    <image src="{{imagesUrl}}/img_28.png" class="arrow" />
+                  </view>
+                  <view class="totals">
+                    <view class="zhifu" wx:if="{{item.status ==10}}">
+                      <view class="txt_name">剩余支付时间</view>
+                      <van-count-down time="{{ item.time }}" style="color: #7d7e80;" class="piao_time" />
+                    </view>
+                    <view class="bosx">
+                      <view class="zong">{{item.status == 10?'应付款：':'已付款：'}}</view>
+                      <view class="pt">
+                        <view class="pt_icon">¥</view>
+                        <view class="pt_price">{{item.pay_price}}</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="bit_btn">
+                  <button class="bt_emp btnmargin" disabled="{{is_true}}" catchtap="cancelTicket" data-id="{{item.id}}" wx:if="{{item.status == 10}}">
+                    取消订单
+                  </button>
+                  <button class="bt_bg btnmargin" disabled="{{is_true}}" catchtap="payTicket" data-id="{{item.id}}" wx:if="{{item.status == 10}}">
+                    付款
+                  </button>
+                  <button class="bt_emp btnmargin" disabled="{{is_true}}" catchtap="editotTicket" data-id="{{item.id}}" wx:if="{{item.status == 40}}">
+                    改签
+                  </button>
+                  <button class="bt_bg btnmargin" wx:if="{{item.status == 30 ||  item.status == 40}}" catchtap="goDrawback" data-pay="{{item.pay_price}}" data-id="{{item.id}}">
+                    申请退款
+                  </button>
+                </view>
+              </view>
+            </block>
+            <view class="nomore_list" wx:if="{{is_more}}">没有更多数据了哦~~~</view>
+          </block>
+          <view class="cno" wx:else>
+            <view class="kongbox" wx:if="{{it_cloose== true}}">
+              <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+              <view class="c_name">暂无数据</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

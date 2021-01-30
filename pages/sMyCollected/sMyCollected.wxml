@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">我的收藏</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="lists">
+      <block wx:if="{{collected.length!=0}}">
+        <block wx:for="{{collected}}" wx:for-index="index" wx:key="index" wx:for-item="item">
+          <view class="list_item" bindtap="goToDeatils" data-goods_id="{{item.goods_id}}">
+            <image src="{{item.image}}" />
+            <view class="right_items">
+              <view class="test_ title_content">{{item.goods_name}}</view>
+              <view class="it_bx">
+                <!-- <block wx:for="{{four}}" wx:for-index="indexs" wx:key="indexs" wx:for-item="items" wx:if="{{indexs <3}}"> -->
+                <view class="bx_name">{{item.description}}</view>
+                <!-- </block> -->
+              </view>
+              <view class="xiao">
+                <text class="s_xiao_s">销量{{item.goods_sales}}件</text>
+              </view>
+              <view class="pt">
+                <view class="pt_icon">¥</view>
+                <view class="pt_price">{{item.goods_min_price}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+        <view class="nomore_list" wx:if="{{no_more}}">没有更多数据了哦~~</view>
+      </block>
+      <view class="cno" wx:else>
+        <view class="kongbox" wx:if="{{it_cloose== true}}">
+          <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+          <view class="c_name">暂无数据</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

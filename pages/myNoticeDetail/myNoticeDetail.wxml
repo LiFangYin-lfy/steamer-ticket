@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">公告详情</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="details_img">
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+    <view class="more_notice">
+      <view class="more_name">
+        <image src="{{imagesUrl}}/img_70.png" />
+        <view class="items_more">更多公告</view>
+      </view>
+      <view class="noticeList">
+        <block wx:for="{{noticeList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+          <view class="list_item" bindtap="gerDetail" data-id="{{item.id}}">
+            {{index+1}}.{{item.title}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="zan_dialog {{ showDialog ? 'zan_dialog_show' : '' }}" wx:if="{{showDialog}}">
+    <view class="zan_dialog__mask" bindtap="toggleDialog" />
+    <view class="zan_dialog__container">
+      <view bindtap="toggleDialog" class="popup">
+        <view class="imp">
+          <!-- <image src="{{imagesUrl}}/img_68.png" mode="widthFix" /> -->
+        </view>
+        <view class="down_imgs">
+          <image src="{{imagesUrl}}/img_69.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

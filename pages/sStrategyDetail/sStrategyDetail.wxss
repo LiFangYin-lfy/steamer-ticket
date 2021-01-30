@@ -1,0 +1,209 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(to right, #ffb94c, #ff893e);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+}
+.container .health .detal {
+  background-color: #fff;
+}
+.container .health .detal .details {
+  width: 100%;
+  padding: 32rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .health .detal .details .titles {
+  width: 100%;
+  font-size: 44rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+  line-height: 60rpx;
+  letter-spacing: 1rpx;
+}
+.container .health .detal .details .details_img {
+  overflow: hidden;
+}
+.container .health .detal .details .dow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .health .detal .details .dow .dates {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+  margin-right: 50rpx;
+}
+.container .health .detal .details .dow .w_imgs {
+  display: flex;
+  align-items: center;
+}
+.container .health .detal .details .dow .w_imgs image {
+  width: 32rpx;
+  height: 20rpx;
+  margin-right: 20rpx;
+}
+.container .health .detal .details .dow .w_imgs .n_num {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .detal .details .viedeos {
+  width: 100%;
+}
+.container .health .detal .details .viedeos .item_video {
+  width: 100%;
+}
+.container .health .tui {
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding-bottom: 120rpx;
+  box-sizing: border-box;
+}
+.container .health .tui .tui_name {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #323233;
+  line-height: 40rpx;
+  position: relative;
+  padding: 28rpx 32rpx 28rpx 64rpx;
+  box-sizing: border-box;
+}
+.container .health .tui .tui_name::after {
+  position: absolute;
+  content: '';
+  left: 32rpx;
+  top: 28rpx;
+  width: 10rpx;
+  height: 40rpx;
+  border-radius: 6rpx;
+  background: linear-gradient(180deg, #ffa245, #f5f6f8);
+}
+.container .health .tui .tui_list {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.container .health .tui .tui_list .list_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.container .health .tui .tui_list .list_item image {
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 8rpx;
+}
+.container .health .tui .tui_list .list_item .right_items {
+  flex: 1;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .tui .tui_list .list_item .right_items .test_ {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 44rpx;
+}
+.container .health .tui .tui_list .list_item .right_items .it_bx {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+.container .health .tui .tui_list .list_item .right_items .it_bx .bx_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+  border-right: 1rpx solid #DCDEE0;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.container .health .tui .tui_list .list_item .right_items .it_bx .bx_name:first-child {
+  padding-left: 0;
+}
+.container .health .tui .tui_list .list_item .right_items .xiao {
+  margin-bottom: 16rpx;
+}
+.container .health .tui .tui_list .list_item .right_items .xiao .s_xiao_s {
+  background: #fff2df;
+  border: 1rpx solid #ffb23c;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #ffb23c;
+  line-height: 32rpx;
+  padding: 5rpx 10rpx;
+  box-sizing: border-box;
+}
+.container .health .tui .tui_list .list_item .right_items .pt {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+.container .health .tui .tui_list .list_item .right_items .pt .pt_icon {
+  font-size: 18rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .health .tui .tui_list .list_item .right_items .pt .pt_price {
+  font-size: 24rpx;
+  color: #FF4444;
+  font-weight: 500;
+}

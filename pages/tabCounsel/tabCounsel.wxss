@@ -1,0 +1,203 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.container .health .list {
+  width: 100%;
+  padding-bottom: 120rpx;
+  box-sizing: border-box;
+}
+.container .health .list .lit_item {
+  width: 100%;
+  margin-bottom: 28rpx;
+}
+.container .health .list .lit_item .sote_box {
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .list .lit_item .sote_box .store_name {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 600;
+  text-align: left;
+  color: #323233;
+  line-height: 44rpx;
+}
+.container .health .list .lit_item .sote_box .store_o {
+  width: 100%;
+  display: flex;
+  padding: 28rpx 0 0;
+  box-sizing: border-box;
+}
+.container .health .list .lit_item .sote_box .store_o image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+}
+.container .health .list .lit_item .sote_box .store_o .ri_store {
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  flex: 1;
+  height: 160rpx;
+}
+.container .health .list .lit_item .sote_box .store_o .ri_store .title_one {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+}
+.container .health .list .lit_item .sote_box .store_o .ri_store .down_store {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .health .list .lit_item .sote_box .store_o .ri_store .down_store .rulw,
+.container .health .list .lit_item .sote_box .store_o .ri_store .down_store .num {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .list .lit_item .stoe_prise {
+  margin-top: 28rpx;
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .list .lit_item .stoe_prise .appraise {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 2rpx solid #F1F2F4;
+}
+.container .health .list .lit_item .stoe_prise .appraise .arr_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+  width: 120rpx;
+}
+.container .health .list .lit_item .stoe_prise .appraise .star {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container .health .list .lit_item .stoe_prise .appraise .star .iims {
+  display: flex;
+  align-items: center;
+}
+.container .health .list .lit_item .stoe_prise .appraise .star .iims .lims {
+  margin: 0 5rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+.container .health .list .lit_item .stoe_prise .appraise .star .tes_star {
+  font-size: 18rpx;
+  font-family: AlibabaPuHuiTi-Regular;
+  color: #fd9400;
+  line-height: 22rpx;
+  margin-left: 20rpx;
+}
+.container .health .list .lit_item .stoe_prise .areas {
+  width: 100%;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.container .health .list .lit_item .stoe_prise .areas textarea {
+  width: 100%;
+  height: 300rpx;
+  padding-top: 28rpx;
+  box-sizing: border-box;
+}
+.container .health .list .lit_item .stoe_prise .areas .numb {
+  position: absolute;
+  bottom: 28rpx;
+  right: 0;
+  z-index: 2;
+}
+.container .health .list .lit_item .stoe_prise .uploader_img {
+  width: 100%;
+  display: flex;
+}
+.container .health .list .lit_item .stoe_prise .uploader_img .upAdd {
+  width: 160rpx;
+  height: 160rpx;
+}
+.container .health .list .lit_item .stoe_prise .uploader_img .upAdd image {
+  width: 100%;
+}
+.container .health .list .lit_item .stoe_prise .uploader_img .uploader_list {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.container .health .list .lit_item .stoe_prise .uploader_img .uploader_list .s_detlte {
+  width: 160rpx;
+  position: relative;
+  margin-right: 10rpx;
+  flex-shrink: 0;
+}
+.container .health .list .lit_item .stoe_prise .uploader_img .uploader_list .s_detlte .pictures {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  flex-shrink: 0;
+}
+.container .health .list .lit_item .stoe_prise .uploader_img .uploader_list .s_detlte .delete {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}

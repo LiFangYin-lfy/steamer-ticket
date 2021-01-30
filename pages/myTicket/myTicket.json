@@ -1,0 +1,6 @@
+{
+  "usingComponents": {"concat": "/Components/concat/concat",
+     "van-count-down": "@vant/weapp/count-down/index"},
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white"
+}

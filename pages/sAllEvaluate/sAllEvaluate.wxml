@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">全部评价</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="bs" wx:if="{{evaluate.length !=0}}">
+      <view class="prise">
+        <block wx:for="{{evaluate}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="pr_list">
+            <view class="top_head">
+              <image src="{{item.user.avatar}}" class="head_img" />
+              <view class="hed_right">
+                <view class="hed_nam">
+                  <view class="h_names">{{item.user.nickname}}</view>
+                  <view class="star">
+                    <view class="iims">
+                      <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=1 }}" class="lims" />
+                      <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                      <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=2 }}" class="lims" />
+                      <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                      <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=3 }}" class="lims" />
+                      <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                      <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=4 }}" class="lims" />
+                      <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                      <image src="{{imagesUrl}}/img_27.png" wx:if="{{item.score>=5 }}" class="lims" />
+                      <image src="{{imagesUrl}}/img_26.png" wx:else class="lims" />
+                    </view>
+                  </view>
+                </view>
+                <view class="date">{{item.createtime}}</view>
+              </view>
+            </view>
+            <view class="pr_tst">{{item.content}}</view>
+            <view class="pr_imgs">
+              <block wx:for="{{item.images}}" wx:for-index="index1" wx:for-item="item1" wx:key="index1">
+                <image src="{{item1}}" data-index="{{index}}" data-index1="{{index1}}" catchtap='previewImg' class="imgst" />
+              </block>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="sts" wx:if="{{nomore}}">没有更多评价了~~</view>
+    </view>
+    <view class="cno" wx:else>
+      <view class="kongbox" wx:if="{{it_cloose== true}}">
+        <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+        <view class="c_name">暂无数据</view>
+      </view>
+    </view>
+  </view>
+</view>

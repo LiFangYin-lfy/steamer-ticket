@@ -1,0 +1,213 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+}
+.container .health .list_form {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .health .list_form .t_m {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #EBEDF0;
+}
+.container .health .list_form .t_m .t_name {
+  width: 150rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 88rpx;
+  height: 88rpx;
+}
+.container .health .list_form .t_m .change_4S {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+}
+.container .health .list_form .t_m .change_4S .picker_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+}
+.container .health .list_form .t_m .change_4S .picker_box .picker_1 {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #BDC4CE;
+}
+.container .health .list_form .t_m .change_4S .picker_box .buy_time {
+  color: #06121E;
+}
+.container .health .list_form .t_m .change_4S .picker_box .rowimg {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .health .list_form .t_m .change_4S .picker_box .rowimg image {
+  width: 100%;
+}
+.container .health .list_form .t_m .inputed {
+  flex: 1;
+  height: 88rpx;
+}
+.container .health .list_form .t_m .inputed .inptus {
+  width: 100%;
+  height: 88rpx;
+}
+.container .health .list_form .t_m .box_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+}
+.container .health .list_form .t_m .box_item .box_ren {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #323233;
+  line-height: 88rpx;
+}
+.container .health .list_form .t_m .box_item image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .health .list_form .t_m .w_id_card {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+}
+.container .health .list_form .t_m .w_id_card .inputmd {
+  flex: 1;
+}
+.container .health .list_form .t_m .w_id_card .inputmd .inptus {
+  height: 88rpx;
+  width: 100%;
+}
+.container .health .list_form .t_m .w_id_card .arrow {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .health .goumai {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.container .health .goumai .mai_name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .health .goumai .mai_name image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+.container .health .goumai .mai_name .xu_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .goumai .detail_list {
+  width: 100%;
+  margin-top: 20rpx;
+}
+.container .health .goumai .detail_list .list_del {
+  width: 100%;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 42rpx;
+  letter-spacing: 1rpx;
+}
+.container .bny_btn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+.container .bny_btn .bit_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .bny_btn .bit_btn .bt_emp {
+  flex: 1;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #FFA230;
+  border: 1rpx solid #ffa230;
+}
+.container .bny_btn .bit_btn .bt_bg {
+  flex: 1;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #FFA230;
+}
+.container .bny_btn .bit_btn .btnmargin {
+  margin-left: 32rpx;
+}
+.container .bny_btn .bit_btn .btnmargin:first-child {
+  margin-left: 0;
+}

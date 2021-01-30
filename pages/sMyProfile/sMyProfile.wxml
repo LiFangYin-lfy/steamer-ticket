@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <image src="{{imagesUrl}}/img_z.png" bindtap="goback" />
+      <view class="title_oage">我的资料</view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <form action="" bindsubmit="submited">
+      <view class="bos">
+        <view class="tou" bindtap="chooseImg">
+          <view class="let_name">头像</view>
+          <view class="head_imgs hdds">
+            <image src="{{avatar}}" />
+            <image src="{{imagesUrl}}/img_28.png" class="arros" />
+          </view>
+        </view>
+        <view class="tou">
+          <view class="let_name">昵称</view>
+          <view class="head_imgs">
+            <input type="text" value="{{nickname}}" name="nickname" class="inpts" placeholder="请输入昵称" bindinput="getNickname" placeholder-class="input_placeholder" />
+          </view>
+        </view>
+      </view>
+      <view class="btnbuy">
+        <button class="btnbuy__" size="default" form-type="submit" disabled="{{formTrue}}">
+          保存
+        </button>
+      </view>
+    </form>
+  </view>
+</view>

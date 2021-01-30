@@ -1,0 +1,502 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(to right, #ffb94c, #ff893e);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+  margin-top: 20rpx;
+}
+.container .health .nav_title {
+  width: 100%;
+  padding: 12rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container .health .nav_title .nav_bot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 64rpx;
+  background: #ffffff;
+  border: 1rpx solid #ffb740;
+  border-radius: 32rpx;
+}
+.container .health .nav_title .nav_bot .box_nav {
+  flex: 1;
+}
+.container .health .nav_title .nav_bot .box_nav .nav_name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFB740;
+  font-size: 32rpx;
+  height: 64rpx;
+}
+.container .health .nav_title .nav_bot .nav_cllass {
+  border-radius: 32rpx 0 0 32rpx;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+}
+.container .health .nav_title .nav_bot .nav_cllass .nav_name {
+  color: #fff;
+}
+.container .health .nav_title .nav_bot .nav_cllass2 {
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+  border-radius: 0 32rpx 32rpx 0;
+}
+.container .health .nav_title .nav_bot .nav_cllass2 .nav_name {
+  color: #fff;
+}
+.container .health .tuan_order {
+  width: 100%;
+  height: 88rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #f9f9f9;
+}
+.container .health .tuan_order .bottom_scroll {
+  display: flex;
+  align-items: center;
+}
+.container .health .tuan_order .bottom_scroll .nav {
+  line-height: 80rpx;
+  flex: 1;
+}
+.container .health .tuan_order .bottom_scroll .nav .nav_tab {
+  color: #06121E;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .health .tuan_order .bottom_scroll .nav .active {
+  color: #FFA230;
+  font-weight: bold;
+  line-height: 80rpx;
+  position: relative;
+}
+.container .health .tuan_order .bottom_scroll .nav .active::after {
+  position: relative;
+  display: block;
+  content: '';
+  width: 40rpx;
+  height: 4rpx;
+  background: #FFA230;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .health .tuan_order .bottom_scroll .nav:last-child {
+  flex: none;
+  width: 200rpx;
+}
+.container .health .lists {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one {
+  width: 100%;
+}
+.container .health .lists .bor_one .items {
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 12rpx 48rpx 0rpx rgba(255, 196, 156, 0.35);
+}
+.container .health .lists .bor_one .items .top_o {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_o .lft_ig {
+  display: flex;
+  align-items: center;
+}
+.container .health .lists .bor_one .items .top_o .lft_ig image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
+.container .health .lists .bor_one .items .top_o .lft_ig .store_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ff914c;
+}
+.container .health .lists .bor_one .items .top_o .order_status {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: right;
+  color: #ff5b13;
+}
+.container .health .lists .bor_one .items .top_co {
+  width: 100%;
+  display: flex;
+  border-top: 2rpx solid #F1F2F4;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_co image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+}
+.container .health .lists .bor_one .items .top_co .top_right {
+  flex: 1;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_co .top_right .titles {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 44rpx;
+}
+.container .health .lists .bor_one .items .top_co .top_right .piao {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .health .lists .bor_one .items .top_co .top_right .piao .piao_date {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .lists .bor_one .items .top_co .top_right .piao .piao_time {
+  margin-left: 20rpx;
+  color: #7d7e80;
+}
+.container .health .lists .bor_one .items .top_co .top_right .piao .van-count-down {
+  color: #7d7e80;
+}
+.container .health .lists .bor_one .items .top_co .top_right .pr_num {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_co .top_right .pr_num .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .lists .bor_one .items .top_co .top_right .pr_num .pt .pt_icon {
+  font-size: 18rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .health .lists .bor_one .items .top_co .top_right .pr_num .pt .pt_price {
+  font-size: 24rpx;
+  color: #FF4444;
+  font-weight: 500;
+}
+.container .health .lists .bor_one .items .top_co .top_right .pr_num .nunbs {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .lists .bor_one .items .top_co .top_right .pr_num .nunbs .bs_icon {
+  font-size: 18rpx;
+  color: #7D7E80;
+  font-weight: 500;
+}
+.container .health .lists .bor_one .items .top_co .top_right .pr_num .nunbs .bs_price {
+  font-size: 24rpx;
+  color: #7D7E80;
+  font-weight: 500;
+}
+.container .health .lists .bor_one .items .totals {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .totals .d_box {
+  height: 40rpx;
+}
+.container .health .lists .bor_one .items .totals .d_box .zhifu {
+  display: flex;
+  align-items: center;
+}
+.container .health .lists .bor_one .items .totals .d_box .zhifu .txt_name {
+  font-size: 28rpx;
+  color: #7d7e80;
+}
+.container .health .lists .bor_one .items .totals .d_box .zhifu .van-count-down {
+  color: #7d7e80;
+  font-size: 28rpx;
+  margin-left: 16rpx;
+  line-height: 0px !important;
+  line-height: var(--count-down-line-height, 0) !important;
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+}
+.container .health .lists .bor_one .items .totals .bosx {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container .health .lists .bor_one .items .totals .bosx .zong {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .lists .bor_one .items .totals .bosx .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .lists .bor_one .items .totals .bosx .pt .pt_icon {
+  font-size: 22rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .lists .bor_one .items .totals .bosx .pt .pt_price {
+  font-size: 28rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .lists .bor_one .items .top_otr {
+  width: 100%;
+  border-top: 2rpx solid #F1F2F4;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_otr .mudi {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .health .lists .bor_one .items .top_otr .mudi .start_go {
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #323233;
+  line-height: 50rpx;
+}
+.container .health .lists .bor_one .items .top_otr .mudi .from_go {
+  color: #D8D8D8;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_otr .go_way {
+  width: 100%;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong {
+  margin-right: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong .ong_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong .piao {
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong .piao .piao_date {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong .piao .piao_time {
+  margin-left: 20rpx;
+  color: #7d7e80;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong .piao .van-count-down {
+  color: #7d7e80;
+}
+.container .health .lists .bor_one .items .top_otr .go_way .ong:last-child {
+  margin-right: 0;
+}
+.container .health .lists .bor_one .items .top_otr .ticket_rule {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0 20rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_otr .ticket_rule .left_rule {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container .health .lists .bor_one .items .top_otr .ticket_rule .left_rule image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.container .health .lists .bor_one .items .top_otr .ticket_rule .left_rule .rule_names {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ff914c;
+  line-height: 40rpx;
+  margin-left: 16rpx;
+}
+.container .health .lists .bor_one .items .top_otr .ticket_rule .arrow {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .health .lists .bor_one .items .top_otr .totals {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rpx 0 20rpx;
+  box-sizing: border-box;
+}
+.container .health .lists .bor_one .items .top_otr .totals .zhifu {
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+}
+.container .health .lists .bor_one .items .top_otr .totals .zhifu .txt_name {
+  font-size: 28rpx;
+  color: #7d7e80;
+}
+.container .health .lists .bor_one .items .top_otr .totals .zhifu .van-count-down {
+  color: #7d7e80;
+  font-size: 28rpx;
+  margin-left: 16rpx;
+  line-height: 0px !important;
+  line-height: var(--count-down-line-height, 0) !important;
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+}
+.container .health .lists .bor_one .items .top_otr .totals .bosx {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container .health .lists .bor_one .items .top_otr .totals .bosx .zong {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .lists .bor_one .items .top_otr .totals .bosx .pt {
+  display: flex;
+  align-items: baseline;
+}
+.container .health .lists .bor_one .items .top_otr .totals .bosx .pt .pt_icon {
+  font-size: 22rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .lists .bor_one .items .top_otr .totals .bosx .pt .pt_price {
+  font-size: 28rpx;
+  color: #FF4444;
+  font-weight: 600;
+}
+.container .health .lists .bor_one .items .bit_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+  border-top: 2rpx solid #F1F2F4;
+}
+.container .health .lists .bor_one .items .bit_btn .bt_emp {
+  width: 200rpx;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #FFA230;
+  border: 1rpx solid #ffa230;
+}
+.container .health .lists .bor_one .items .bit_btn .bt_bg {
+  width: 200rpx;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #FFA230;
+}
+.container .health .lists .bor_one .items .bit_btn .btnmargin {
+  margin-left: 20rpx;
+}
+.container .health .lists .bor_one .items .bit_btn button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+.container .health .lists .bor_one .items .bit_btn button::after {
+  border: 0 none;
+}

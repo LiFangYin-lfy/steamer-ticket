@@ -1,0 +1,165 @@
+<view class="container">
+  <view class="header">
+    <view class="top_banner">
+      <view class="banner_image">
+        <swiper class="banner" indicator-color="{{indicator}}" indicator-active-color="{{indicatorActive}}" circular='{{circular}}' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}">
+          <swiper-item wx:for="{{loop}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+            <image src="{{item.image}}" catchtap="godetailsImg" data-item="{{item}}" />
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="posit">
+        <view class="search_b">
+          <view style='height:{{statusTop}}px'></view>
+          <view class="scg_h">
+            <view class="left_shi" catchtap="goSdearch">
+              <view class="po_it">
+                <image src="{{logo_img}}" mode="widthFix" />
+              </view>
+              <view class="inp_ut">
+                <image src="{{imagesUrl}}/img_21.png" class="inpt_img" />
+                <input placeholder="搜索目的地/景点/游玩项目" placeholder-class="input__placeholder" class="input_text" />
+              </view>
+            </view>
+            <view class="right_empty"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="home_a">
+      <view class="g_gao">
+        <view class="gong_name">公告</view>
+        <view class="right_gong">
+          <swiper class="tab_right" vertical="true" circular="true" autoplay="true" interval="2000" display-multiple-items='1'>
+            <block wx:for='{{homeInfo}}' wx:if="{{index <3}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+              <swiper-item>
+                <view class="time  title_content1" bindtap="goTicketDetail" data-id="{{item.id}}">
+                  {{item.title}}
+                </view>
+              </swiper-item>
+            </block>
+          </swiper>
+          <view class="r_img" bindtap="goMyNoticeList">
+            <image src="{{imagesUrl}}/img_78.png" />
+          </view>
+        </view>
+      </view>
+      <view class="address_change">
+        <view class="top_chage">
+          <view class="ress_left" bindtap="changeItem3" data-start_count='1' data-start="{{start_name}}">
+            <view class="ress_name">{{start_name}}</view>
+          </view>
+          <view class="center_img" bindtap="changeItem">
+            <image src="{{imagesUrl}}/img_77.png" mode="widthFix" />
+          </view>
+          <view class="right_left" bindtap="changeItem3" data-start_count='0' data-start="{{end_name}}">
+            <view class="ress_name">{{end_name}}</view>
+          </view>
+        </view>
+        <view class="change_4S">
+          <picker mode="date" style="display :block; width: 100%;height: 88rpx;" value="{{buy_time}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindTimeChange" name="buy_time">
+            <view class="picker_box">
+              <view class="picker_1  {{buy_time != ''? 'buy_time':'' }}">
+                {{buy_time == ''? '请选择时间':buy_time + '    星期'+ weekArray}}
+              </view>
+              <view class="rowimg">
+                <image src="{{imagesUrl}}/img_28.png" />
+              </view>
+            </view>
+          </picker>
+        </view>
+        <view class="btns" bindtap="ticketQuery">
+          <view class="down_btn">船票预定</view>
+        </view>
+      </view>
+      <view class="cate_list">
+        <swiper class="swiper" circular='{{circular}}'>
+          <swiper-item>
+            <view class="swiper_item">
+              <block wx:for="{{myCate}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+                <view class="swiper_item_view" catchtap="cateChange" data-item="{{item}}">
+                  <image class="swiper_img" src="{{item.image}}" />
+                  <view class="item_name">{{item.name}}</view>
+                </view>
+              </block>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="bottom_scroll" scroll-x="true">
+        <view class="nav" wx:for="{{myCate}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+          <view class="nav_tab  {{esl == index?'active':''}} " bindtap='switchTap' data-id="{{item.id}}" data-index="{{index}}">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+      <view class="lists">
+        <block wx:if="{{listStore.length!=0}}">
+          <block wx:for="{{listStore}}" wx:for-index="index" wx:key="index" wx:for-item="item">
+            <view class="list_item" bindtap="goToDeatils" data-goods_id="{{item.goods_id}}">
+              <view class="left_image">
+                <image src="{{item.image}}" />
+                <view class="newpin" wx:if="{{item.flag!=''}}">
+                  <view class="vipim">{{item.flag}}</view>
+                </view>
+              </view>
+              <view class="right_items">
+                <view class="test_ title_content">{{item.goods_name}}</view>
+                <view class="it_bx">
+                  <!-- <block wx:for="{{four}}" wx:for-index="indexs" wx:key="indexs" wx:for-item="items" wx:if="{{indexs <3}}"> -->
+                  <view class="bx_name">{{item.description}}</view>
+                  <!-- </block> -->
+                </view>
+                <view class="xiao">
+                  <text class="s_xiao_s">销量{{item.goods_sales}}件</text>
+                </view>
+                <view class="pt">
+                  <view class="pt_icon">¥</view>
+                  <view class="pt_price">{{item.goods_min_price}}</view>
+                </view>
+              </view>
+            </view>
+          </block>
+          <view class="down_test" wx:if="{{nomore}}">没有更多数据了哦~~</view>
+        </block>
+        <view class="cno" wx:else>
+          <view class="kongbox" style="margin : 0rpx auto" wx:if="{{it_cloose== true}}">
+            <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+            <view class="c_name">暂无数据</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 弹窗 -->
+  <view class="zan_dialog " wx:if="{{showDialog}}">
+    <view class="zan_dialog__mask ">
+      <image src="{{showDialogImg}}" style="width:100%;height:100%" />
+    </view>
+    <view class="one" bind:tap="closeIcon">
+      <image src="../../static/img/close.png" style="width:56rpx;height:56rpx" />
+    </view>
+  </view>
+  <!-- 屏幕背景变暗的背景 -->
+  <view class="commodity_screen" catchtouchmove="consume" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" catchtouchmove="consume" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="pop_bss">
+      <view class="top_nav">
+        <view class="quxiao" bindtap="setFalse">取消</view>
+        <view class="quxiao" style="font-weight :600" bindtap="setTrue">确定</view>
+      </view>
+      <view class="list_pops">
+        <scroll-view scroll-y='true' style='height:100%'>
+          <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <view class="itme_pop  {{item.is_false == 1?'is_false' : ''}}" catchtap="trueClick" data-index="{{index}}">
+              {{item.start_name}}-{{item.end_name}}
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

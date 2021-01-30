@@ -1,0 +1,30 @@
+.concat_box {
+  width: 96rpx;
+  height: 210rpx;
+  position: fixed;
+  right: 0rpx;
+  bottom: 100rpx;
+  z-index: 10;
+}
+.concat_box .item_ai {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 0;
+  border: none !important;
+  margin: 0 !important;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.concat_box .item_ai image {
+  width: 68rpx;
+  height: 68rpx;
+}
+.concat_box .item_ai:first-child {
+  margin-bottom: 30rpx !important;
+}
+.concat_box .item_ai button::after {
+  border: 0 none;
+}

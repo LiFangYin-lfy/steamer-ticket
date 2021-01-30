@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="header">
+    <view class="s" style='height:{{statusTop}}px'></view>
+    <view class="left_img">
+      <!-- <image src="{{imagesUrl}}/img_z.png" bindtap="goback" /> -->
+      <view class="title_oage">旅游攻略</view>
+    </view>
+    <view class="banner_image">
+      <swiper class="banner" indicator-color="{{indicator}}" indicator-active-color="{{indicatorActive}}" circular='{{circular}}' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}">
+        <swiper-item wx:for="{{loop}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+          <image src="{{item.image}}" catchtap="godetailsImg" data-index="{{index}}" data-item="{{item}}" />
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <concat />
+  <view class="health">
+    <view class="s_list">
+      <view class="bottom_scroll">
+        <view class="nav  " wx:for="{{nav_list}}" wx:key="index" bindtap='switchTap' data-id="{{item.id}}" data-index="{{index}}">
+          <view class="nav_tab  {{esl == index?'active':''}} ">{{item.name}}</view>
+        </view>
+      </view>
+      <view class="list_navs">
+        <block wx:if="{{listStore.length !=0}}">
+          <block wx:for="{{listStore}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="item_namvs" bindtap="goStrategyDetail" data-id="{{item.id}}">
+              <image src="{{item.image}}" />
+              <view class="riht_namvs">
+                <view class="titlles title_content2">{{item.title}}</view>
+                <view class="small_title title_content">{{item.describe}}</view>
+                <view class="dow">
+                  <view class="datas">{{item.createtime}}</view>
+                  <view class="s_items">
+                    <image src="{{imagesUrl}}/img_38.png" />
+                    <view class="eye_nuim">{{item.view_num}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </block>
+        <view class="cno" wx:else>
+          <view class="kongbox" wx:if="{{it_cloose== true}}">
+            <image src="{{imagesUrl}}/img_0.png" mode="widthFix" />
+            <view class="c_name">暂无数据</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

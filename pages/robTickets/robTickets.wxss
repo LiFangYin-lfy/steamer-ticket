@@ -1,0 +1,242 @@
+page {
+  background: #F3F4F6;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  background: linear-gradient(136deg, #ffbb4d 1%, #ff863d 99%);
+}
+.container .header .left_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+}
+.container .header .left_img image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .header .left_img .title_oage {
+  flex: 1;
+  margin-right: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+.container .health {
+  width: 100%;
+}
+.container .health .change {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.container .health .change .change_time {
+  width: 100%;
+  display: flex;
+  padding: 28rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EBEDF0;
+}
+.container .health .change .change_time .time_name {
+  width: 156rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 40rpx;
+}
+.container .health .change .change_time .time_bod {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .health .change .change_time .time_bod .tm_item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  margin-bottom: 20rpx;
+}
+.container .health .change .change_time .time_bod .tm_item .imgs {
+  width: 28rpx;
+  height: 40rpx;
+}
+.container .health .change .change_time .time_bod .tm_item .imgs image {
+  width: 100%;
+  height: 28rpx;
+}
+.container .health .change .change_time .time_bod .tm_item .tm_names {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #969799;
+  margin-left: 8rpx;
+}
+.container .health .change .change_time .time_bod .tm_item .is_true {
+  color: #FFA230;
+}
+.container .health .change .change_time .time_bod .tm_width {
+  width: 100%;
+}
+.container .health .change .change_time .time_bod .tgm_box {
+  width: 168rpx;
+  height: 184rpx;
+  background: #dcdee0;
+  border-radius: 16rpx;
+  position: relative;
+  margin-right: 20rpx;
+}
+.container .health .change .change_time .time_bod .tgm_box .imges {
+  width: 100%;
+  border-radius: 18rpx;
+}
+.container .health .change .change_time .time_bod .tgm_box .dowm_po {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #dcdee0;
+  border-radius: 0 0 16rpx 16rpx;
+}
+.container .health .change .change_time .time_bod .tgm_box .dowm_po .po_name {
+  width: 100%;
+  height: 56rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .health .change .change_time .time_bod .tgm_box:last-child {
+  margin: 0;
+}
+.container .health .change .change_time .time_bod .tgm_box .is_back {
+  background: #FFA230;
+}
+.container .health .change .change_time .time_bod .down_ti {
+  width: 100%;
+  padding-top: 24rpx;
+  box-sizing: border-box;
+}
+.container .health .change .change_time .time_bod .down_ti .ti_name {
+  font-size: 22rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #969799;
+  line-height: 32rpx;
+}
+.container .health .gou_bod {
+  width: 100%;
+  padding-bottom: 150rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.container .health .gou_bod .goumai {
+  width: 100%;
+  margin-top: 24rpx;
+  padding: 0 32rpx 32rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container .health .gou_bod .goumai .gou_rule {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0 20rpx;
+  box-sizing: border-box;
+}
+.container .health .gou_bod .goumai .gou_rule image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 20rpx;
+}
+.container .health .gou_bod .goumai .gou_rule .rule_name {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 600;
+  color: #323233;
+  line-height: 40rpx;
+}
+.container .health .gou_bod .goumai .dos_list {
+  width: 100%;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 42rpx;
+  letter-spacing: 1rpx;
+}
+.container .health .gou_bod .goumai .dos_list .details_img {
+  max-width: 750rpx;
+}
+.container .health .gou_bod .goumai .info_box {
+  width: 100%;
+}
+.container .health .gou_bod .goumai .info_box .info_list {
+  width: 100%;
+  height: 88rpx;
+  border-bottom: 1rpx solid #EBEDF0;
+  display: flex;
+  align-items: center;
+}
+.container .health .gou_bod .goumai .info_box .info_list .left_info {
+  width: 160rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7e80;
+  line-height: 88rpx;
+}
+.container .health .gou_bod .goumai .info_box .info_list .ri_t {
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #323233;
+  line-height: 88rpx;
+}
+.container .health .gou_bod .goumai .info_box .info_list:last-child {
+  border: 0 none;
+}
+.container .health .btns {
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  background-color: #fff;
+}
+.container .health .btns .btnd {
+  width: 100%;
+  padding: 10rpx 32rpx;
+  box-sizing: border-box;
+}
+.container .health .btns .btnd .pist {
+  width: 100%;
+  border-radius: 44rpx;
+  height: 88rpx;
+  background: #ffa230;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
